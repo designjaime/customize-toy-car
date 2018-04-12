@@ -38,7 +38,7 @@ function handleSignin(){
                 .then(
                     function(){
                         //window.location.href="http://google.com";
-                        window.location.href="http://mingyanglidesign.com/aau/wnm617/final/home.html";
+                        window.location.href="home.html";
                     }
                     )
                 
@@ -53,7 +53,7 @@ function handleSignout(){
     firebase.auth().signOut()
     .then(
         function(){
-            window.location.href="http://mingyanglidesign.com/aau/wnm617/final";
+            window.location.href="index.html";
         }) 
 
     .catch(
@@ -72,7 +72,7 @@ function handleFBlogin(){
                 var token = result.credential.accessToken;
                 var user = result.user;
                 
-                window.location.href="http://mingyanglidesign.com/aau/wnm617/final/home.html";
+                window.location.href="home.html";
                 console.log(user)
     
 
@@ -103,7 +103,7 @@ function handlegooglelogin(){
                 var token = result.credential.accessToken;
                 var user = result.user;
                 
-                window.location.href="http://mingyanglidesign.com/aau/wnm617/final/home.html";
+                window.location.href="home.html";
 
             })
 
