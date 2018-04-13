@@ -10,20 +10,93 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/slider.css">
 </head>
 
 <body>
-    <div class="container">
-        <a href="cart.html">
-            <div class="btn btn-info btn-lg">Add to cart
+    <div id="wrapper">
+        <div id="sidebar-wrapper">
+            <ul class="sidebar-nav">
+                <li class="sidebar-brand">
+                    <a>Customize Toy Car</a>
+                </li>
+                <li>
+                    <a href="#">Home</a>
+                </li>
+                <li>
+                    <a href="#">Garage</a>
+                </li>
+                <li>
+                    <a href="#">Profile</a>
+                </li>
+                <li id="bottombtn">
+                    <input type="submit" id="signout" class="signoutbtn btn-primary btn-xs" value="Sign Out" onclick="handleSignout();">
+                </li>
+            </ul>
+        </div>
+        <div id="page-content-wrapper">
+            <div class="container-fluid">
+                <a href="#menu-toggle" id="menu-toggle"><img src="img/logo.jpg" id="logonav"></a>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-7 text-right">
+                            <img src="img/car1.png" class="carpic"></a>
+                        </div>
+                        <div class="col-sm-5">
+                            <h2>DELUX R1 ROADSTER SET</h2>
+                            <br>
+                            <h3>$24.99</h3>
+                            <br>
+                            <p>Delux R1 Roadster Car with extra Muscle hood and fender, allowing you to design and build your own unique car right out of the box. Real finger-steering and suspension mechanics, modular mix and match design for endless possibilities!</p>
+                            <div class="row">
+                                <div class="col-6 pt-2">
+                            <select class="custom-select">
+                                <option selected>1 </option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                            </select></div>
+                            <div class="col-6">
+                            <a href="cart.html">
+                                <div class="btn btn-info btn-lg">Add to cart
+                                </div>
+                            </a>
+                        </div>
+                        </div>
+                        </div>
+                    </div>
+                    <div class="container">
+                        <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+                            <li class="nav-item">
+                                <a class="nav-link active" id="pills-Color-tab" data-toggle="pill" href="#pills-Color" role="tab" aria-controls="pills-Color" aria-selected="true">Color</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="pills-Stickers-tab" data-toggle="pill" href="#pills-Stickers" role="tab" aria-controls="pills-Stickers" aria-selected="false">Stickers</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="pills-Wheels-tab" data-toggle="pill" href="#pills-Wheels" role="tab" aria-controls="pills-Wheels" aria-selected="false">Wheels</a>
+                            </li>
+                        </ul>
+                        <div class="tab-content" id="pills-tabContent">
+                            <div class="tab-pane fade show active" id="pills-Color" role="tabpanel" aria-labelledby="pills-Color-tab">
+                                <div id="slider-container444">
+                                    <div id="js-slider"></div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="pills-Stickers" role="tabpanel" aria-labelledby="pills-Stickers-tab">...</div>
+                            <div class="tab-pane fade" id="pills-Wheels" role="tabpanel" aria-labelledby="pills-Wheels-tab">...</div>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </a>
+        </div>
     </div>
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script src="js/functions.js"></script>
+    <script src="js/slider.js"></script>
 </body>
 
 </html>
