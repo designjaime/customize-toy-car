@@ -49,7 +49,6 @@ var getStepColor = function (colorA, colorB, value) {
 };
 
 var gradient = document.querySelector("#js-slider");
-var preview = document.querySelector("#preview");
 
 var background = window.getComputedStyle(gradient).getPropertyValue("background");
 
@@ -90,5 +89,5 @@ var showColorFromSlider = function (event, percentage) {
 
   color = getStepColor(colorStops[lowerIndex].color, colorStops[upperIndex].color, value);
 
-  preview.style.backgroundColor = "rgb(" + color.join() + ")";
+  $(".preview").css("background-color","rgb(" + color.join() + ")");
 };
