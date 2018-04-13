@@ -33,8 +33,8 @@ h1 {
 
 .ui-slider {
   background-color: #1ABC9C;
-  background-image: -webkit-linear-gradient(left, #1ABC9C 0%, #F1C40F 50%, #E74C3C 100%);
-  background-image: linear-gradient(to right,#1ABC9C 0%, #F1C40F 50%, #E74C3C 100%);
+  background-image: -webkit-linear-gradient(left, mediumaquamarine 0%, goldenrod 50%, tomato 100%);
+  background-image: linear-gradient(to right, mediumaquamarine 0%, goldenrod 50%, tomato 100%);
 }
 .ui-slider * {
   outline: none;
