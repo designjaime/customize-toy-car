@@ -1,0 +1,17 @@
+#gradient {
+  width: 400px;
+  height: 50px;
+  /* background-image: -webkit-linear-gradient(left, green 0%, blue 50%, red 100%); */
+  /* background-image: -webkit-linear-gradient(left, green 0%, red 100%); */
+    background-image: -webkit-linear-gradient(left, mediumaquamarine 0%, goldenrod 50%, tomato 100%);
+}
+
+#preview {
+  width: 160px;
+  height: 40px;
+  margin-top: 10px;
+  border: 1px solid #ccc;
+  color: #fff;
+  text-align: center;
+  line-height: 40px;
+}
