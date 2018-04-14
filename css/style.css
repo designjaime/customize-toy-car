@@ -293,3 +293,16 @@ input[type="text"]:focus{
     margin-right: 0;
   }
 }
+/*Leon*/
+#nav_u{
+	margin-top: 15px;
+}
+#remove, #edit{
+	margin-top: 15px;
+}
+#mk_payment{
+	text-align:center;
+}
+#result{
+	margin-top:50px;
+}
