@@ -18,6 +18,17 @@ $(function() {
     $("#modal-img-popup .close").click(function() {
         $(this).parent().hide();
     });
+
+    $(".draggable").draggable().resizable();
+    $(".droppable").droppable({
+        drop: function(event, ui) {
+            $(this)
+                .addClass("ui-state-highlight")
+                .find("img")
+                .html("Dropped!");
+        }
+    });
+
 });
 
 function handleSignup() {
