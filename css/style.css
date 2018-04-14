@@ -155,7 +155,10 @@ input[type="text"]:focus{
   text-align: center;
 }
 
-.row {
+#item-container {
+  margin-top:100px; 
+}
+.item-options{
   margin-top:100px; 
 }
 
@@ -167,6 +170,11 @@ input[type="text"]:focus{
 }
 
 #myImg:hover {opacity: 0.7;}
+/*rating star*/
+.checked {
+    color: orange;
+}
+
 
 /* The Modal (background) */
 .modal {
@@ -241,6 +249,12 @@ input[type="text"]:focus{
 
 #modal-img-popup {
   z-index: 3;
+}
+
+.img-sticker{
+  margin: 10px;
+  width: 100px;
+  height: 100px;
 }
 
 /* 100% Image Width on Smaller Screens */
