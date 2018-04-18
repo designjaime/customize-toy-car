@@ -22,7 +22,7 @@ html {
   width:360px;
   margin:20px auto;
 }
-input[type="text"],input[type="email"],input[type="password"],#btn,#signup,#signin,#signout,#fblogin,#googlelogin{
+input[type="text"],input[type="email"],input[type="password"],#btn,#signup,#signin,#signout,#fblogin,#googlelogin,#twitterlogin{
   box-sizing: border-box;
   text-align:center;
   font-size:1.4em;
@@ -44,7 +44,7 @@ input[type="text"]:focus{
 
 
 
-#btn,#signup,#signin,#signout,#fblogin,#googlelogin{
+#btn,#signup,#signin,#signout,#fblogin,#googlelogin,#twitterlogin{
     color:white;
     background: #6a6f77;
 }
