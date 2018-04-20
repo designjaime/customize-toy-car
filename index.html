@@ -10,53 +10,49 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <link rel="stylesheet" href="css/style.css">
+
 </head>
 
 <body>
     <div class="logo">
         <a href="home.html">
-                <img src="img/logo.jpg" style="width: 200px;">
-            </a>
+            <img src="img/logo.jpg" style="width: 200px;"> </a>
     </div>
     <div class="container">
         <div class="input_control">
             <div role="form" id="signupform">
                 <div class="input_control">
-                    <input type="email" id="form-email" class="form-control form_input" placeholder="Enter your Email">
-                </div>
+                    <input type="email" id="form-email" class="form-control form_input" placeholder="Enter your Email"> </div>
                 <div class="input_control">
-                    <input type="Password" id="form-password" class="form-control form_input" placeholder="Enter your Password">
-                </div>
+                    <input type="Password" id="form-password" class="form-control form_input" placeholder="Enter your Password"> </div>
                 <div class="input_control">
                     <input type="submit" id="signup" class="btn-primary" value="Sign Up" onclick="handleSignup();">
-                    <input type="submit" id="signin" class="btn-primary" value="Sign In" onclick="handleSignin();">
-                </div>
+                    <input type="submit" id="signin" class="btn-primary" value="Sign In" onclick="handleSignin();"> </div>
                 <div class="input_control">
                     <input type="submit" id="fblogin" class="btn-primary" value="Facebook Login" onclick="handleFBlogin();">
-                    <input type="submit" id="googlelogin" class="btn-primary" value="Google Login" onclick="handlegooglelogin();">
-                </div>
+                    <input type="submit" id="googlelogin" class="btn-primary" value="Google Login" onclick="handlegooglelogin();"> </div>
             </div>
         </div>
-    <h1>FFFFFF</h1>
-	</div>
-    <script src="https://www.gstatic.com/firebasejs/4.12.0/firebase.js"></script>
-    <script>
-    // Initialize Firebase
-    var config = {
-        apiKey: "AIzaSyAU_68u90E0O_sFdLhCzHLJxeSnKmskUeU",
-        authDomain: "springbreak-df1b8.firebaseapp.com",
-        databaseURL: "https://springbreak-df1b8.firebaseio.com",
-        projectId: "springbreak-df1b8",
-        storageBucket: "springbreak-df1b8.appspot.com",
-        messagingSenderId: "442983166470"
-    };
-    firebase.initializeApp(config);
-    </script>
-    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-    <script src="js/functions.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
+        <script>
+            // Initialize Firebase
+            var config = {
+                apiKey: "AIzaSyDGcInocp3B9uScWtFj_1l4EJRfJBJFLX0",
+                authDomain: "carstomize-ed240.firebaseapp.com",
+                databaseURL: "https://carstomize-ed240.firebaseio.com",
+                projectId: "carstomize-ed240",
+                storageBucket: "carstomize-ed240.appspot.com",
+                messagingSenderId: "873421605960"
+            };
+            firebase.initializeApp(config);
+        </script>
+        <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+        <script src="js/functions.js"></script>
+        <script src="js/auth.js"></script>
+
 </body>
 
 </html>

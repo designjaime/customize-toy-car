@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <link rel="stylesheet" href="css/style.css">
+
 </head>
 
 <body>
@@ -29,45 +30,31 @@
                     <a href="index.html">Profile</a>
                 </li>
                 <li id="bottombtn">
-                    <input type="submit" id="signout" class="signoutbtn btn-primary btn-xs" value="Sign Out" onclick="handleSignout();">
-                </li>
+                    <input type="submit" id="signout" class="signoutbtn btn-primary btn-xs" value="Sign Out" onclick="handleSignout();"> </li>
             </ul>
         </div>
         <div id="page-content-wrapper">
             <div class="container-fluid">
-                <a href="#menu-toggle" id="menu-toggle"><img src="img/logo.jpg" id="logonav"></a>
+                <a href="#menu-toggle" id="menu-toggle">
+                    <img src="img/logo.jpg" id="logonav"> </a>
                 <div class="row" id="item-container">
                     <div class="col-lg-4 col-md-4">
-                        <a href="car-init.html"><img src="img/car1.png" class="carpic"></a>
+                        <a href="car-init.html">
+                            <img src="img/car1.png" class="carpic"> </a>
                     </div>
                     <div class="col-lg-4 col-md-4">
-                        <a href="#"><img src="img/car2.png" class="carpic"></a>
+                        <a href="#">
+                            <img src="img/car2.png" class="carpic"> </a>
                     </div>
                     <div class="col-lg-4 col-md-4">
-                        <a href="#"><img src="img/car3.png" class="carpic"></a>
+                        <a href="#">
+                            <img src="img/car3.png" class="carpic"> </a>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <script src="https://www.gstatic.com/firebasejs/4.12.0/firebase.js"></script>
-    <script>
-    // Initialize Firebase
-    var config = {
-        apiKey: "AIzaSyAU_68u90E0O_sFdLhCzHLJxeSnKmskUeU",
-        authDomain: "springbreak-df1b8.firebaseapp.com",
-        databaseURL: "https://springbreak-df1b8.firebaseio.com",
-        projectId: "springbreak-df1b8",
-        storageBucket: "springbreak-df1b8.appspot.com",
-        messagingSenderId: "442983166470"
-    };
-    firebase.initializeApp(config);
-    </script>
-    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-    <script src="js/functions.js"></script>
+
 </body>
 
 </html>
