@@ -1,0 +1,162 @@
+/*Environment*/
+
+            .wrap {
+                width: 450px;
+                height: 800px;
+                border: 1px solid black;
+                position: relative;
+                margin: auto;
+                overflow: hidden;
+            }
+            /*Own car*/
+
+            .car {
+                position: absolute;
+                bottom: 0px;
+                left: 150px;
+            }
+            /*other cars*/
+
+            .cars {
+                position: absolute;
+            }
+            /*Table border*/
+
+            table {
+                border-collapse: collapse;
+            }
+
+            td {
+                width: 48px;
+                height: 48px;
+            }
+            /*bottom type*/
+
+            .tdd {
+                background: black;
+            }
+            /*car moving type*/
+
+            .tdds {
+                background: gray;
+            }
+            /*Game start UI*/
+
+            .gameStart {
+                width: 450px;
+                height: 800px;
+                position: relative;
+                text-align: center;
+                background: rgba(0, 0, 0, 0.9);
+                /*display: none;*/
+            }
+            /*message type*/
+
+            .mes {
+                line-height: 500px;
+                font-size: 5em;
+                color: white;
+            }
+            /*Game start button*/
+
+            .stratbtn {
+                width: 180px;
+                height: 50px;
+                line-height: 50px;
+                font-size: 1.6em;
+                color: white;
+                border: 1px solid black;
+                position: absolute;
+                top: 450px;
+                left: 135px;
+                cursor: pointer;
+            }
+            /*game over UI*/
+
+            .gameOver {
+                width: 450px;
+                height: 800px;
+                position: relative;
+                text-align: center;
+                background: rgba(0, 0, 0, 0.9);
+                display: none;
+                z-index: 999;
+            }
+            /*Game over message/
+
+            .message {
+                line-height: 500px;
+                font-size: 5em;
+                color: white;
+            }
+            /*Game over button*/
+
+            .overbtn {
+                width: 180px;
+                height: 50px;
+                line-height: 50px;
+                font-size: 1.6em;
+                color: white;
+                border: 1px solid black;
+                position: absolute;
+                top: 510px;
+                left: 135px;
+                cursor: pointer;
+            }
+            /*Game over score*/
+
+            .score {
+                width: 180px;
+                height: 50px;
+                font-size: 1.6em;
+                color: white;
+                border: 1px solid black;
+                line-height: 50px;
+                position: absolute;
+                top: 350px;
+                left: 135px;
+                display: inline-block;
+            }
+
+            .sc {
+                width: 80px;
+                height: 48px;
+                display: inline-block;
+                vertical-align: top;
+            }
+            /*History score*/
+
+            .hisscore {
+                width: 180px;
+                height: 50px;
+                font-size: 1.6em;
+                color: white;
+                border: 1px solid black;
+                line-height: 50px;
+                position: absolute;
+                top: 430px;
+                left: 135px;
+                display: inline-block;
+            }
+
+            .his {
+                width: 43px;
+                height: 48px;
+                display: inline-block;
+                vertical-align: top;
+            }
+            /*fensu*/
+
+            .fenshu {
+                width: 450px;
+                height: 50px;
+                position: absolute;
+                line-height: 50px;
+                font-size: 1.8em;
+                display: inline-block;
+            }
+
+            .fs {
+                display: inline-block;
+                color: red;
+            }
