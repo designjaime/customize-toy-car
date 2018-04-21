@@ -25,12 +25,16 @@ loadData("cars", function (snapshot) {
         isLeftSide = !isRightSide;
         isLastItem = i === snapshot.docs.length - 1;
 
-        str += isLeftSide ? leftItemDiv(doc.id, doc.data().img) : rightItemDiv(doc.id, doc.data().img);
-
-        if (isLeftSide && isLastItem) {
-            str += '<div class="col"></div>';
-        } else if (isRightSide) {
-            str += '</div>' + divStart;
+        if (isLeftSide) {
+            str += leftItemDiv("cars", doc.id, doc.data().img);
+            if (isLastItem) { // need an empty div for the last space.
+                str += '<div class="col"></div>';
+            }
+        } else { // right side
+            str += rightItemDiv("cars", doc.id, doc.data().img);
+            if (!isLastItem) { // add another row for the next item. 
+                str += '</div>' + divStart;
+            }
         }
     });
     str += '</div>';
@@ -40,37 +44,37 @@ loadData("cars", function (snapshot) {
 // load trucks data from database.
 loadData("trucks", function (snapshot) {
     snapshot.docs.forEach(function (doc) {
-        $('#truck-car-items').append(singleItemDiv(doc.id, doc.data().img));
+        $('#truck-car-items').append(singleItemDiv("trucks", doc.id, doc.data().img));
     });
 });
 
 // load trucks data from database.
 loadData("jeeps", function (snapshot) {
     snapshot.docs.forEach(function (doc) {
-        $('#suv-car-items').append(singleItemDiv(doc.id, doc.data().img));
+        $('#suv-car-items').append(singleItemDiv("jeeps", doc.id, doc.data().img));
     });
 });
 
-function leftItemDiv(docId, imgUrl) {
+function leftItemDiv(collection, docId, imgUrl) {
     return '' +
         '<div class="col text-left">' +
-        '<a href="car-init.html?id=' + docId + '">' +
+        '<a href="car-init.html?collection=' + collection + '&docid=' + docId + '">' +
         '    <img class="img-fluid" src="' + imgUrl + '"> </a>' +
         '</div>';
 }
 
-function rightItemDiv(docId, imgUrl) {
+function rightItemDiv(collection, docId, imgUrl) {
     return '' +
         '<div class="col text-right">' +
-        '<a href="car-init.html?id=' + docId + '">' +
+        '<a href="car-init.html?collection=' + collection + '&docid=' + docId + '">' +
         '    <img class="img-fluid" src="' + imgUrl + '"> </a>' +
         '</div>';
 }
 
-function singleItemDiv(docId, imgUrl) {
+function singleItemDiv(collection, docId, imgUrl) {
     return '' +
         '<div class="col">' +
-        '<a href="car-init.html?id=' + docId + '">' +
+        '<a href="car-init.html?collection=' + collection + '&docid=' + docId + '">' +
         '    <img class="img-fluid" src="' + imgUrl + '"> </a>' +
         '</div>';
 }
