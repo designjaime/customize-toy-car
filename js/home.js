@@ -21,9 +21,9 @@ loadData("cars", function (snapshot) {
     divStart = '<div class="row justify-content-center">'
     str = divStart;
     snapshot.docs.forEach(function (doc, i) {
-        isRightSide = (i + 1) % 2 === 0;
-        isLeftSide = !isRightSide;
-        isLastItem = i === snapshot.docs.length - 1;
+        var isRightSide = (i + 1) % 2 === 0;
+        var isLeftSide = !isRightSide;
+        var isLastItem = i === snapshot.docs.length - 1;
 
         if (isLeftSide) {
             str += leftItemDiv("cars", doc.id, doc.data().img);
@@ -57,7 +57,7 @@ loadData("jeeps", function (snapshot) {
 
 function leftItemDiv(collection, docId, imgUrl) {
     return '' +
-        '<div class="col text-left">' +
+        '<div class="col text-right">' +
         '<a href="car-init.html?collection=' + collection + '&docid=' + docId + '">' +
         '    <img class="img-fluid" src="' + imgUrl + '"> </a>' +
         '</div>';
@@ -65,7 +65,7 @@ function leftItemDiv(collection, docId, imgUrl) {
 
 function rightItemDiv(collection, docId, imgUrl) {
     return '' +
-        '<div class="col text-right">' +
+        '<div class="col text-left">' +
         '<a href="car-init.html?collection=' + collection + '&docid=' + docId + '">' +
         '    <img class="img-fluid" src="' + imgUrl + '"> </a>' +
         '</div>';
