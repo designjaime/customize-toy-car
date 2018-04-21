@@ -14,4 +14,7 @@ $(function () {
         $('.back-item').hide();
         $('.item-3').toggle();
     });
+
+    // load car data from database.
+    loadCarsData();
 })
