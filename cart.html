@@ -10,107 +10,100 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <link rel="stylesheet" href="css/style.css">
+
 </head>
 
 <body>
-
     <div id="wrapper">
-
         <div id="sidebar-wrapper">
             <ul class="sidebar-nav">
                 <li class="sidebar-brand">
                     <a>Customize Toy Car</a>
                 </li>
                 <li>
-                    <a href="#">Home</a>
+                    <a href="home.html">Home</a>
                 </li>
                 <li>
                     <a href="#">Garage</a>
                 </li>
                 <li>
-                    <a href="#">Profile</a>
+                    <a href="profile.html">Profile</a>
                 </li>
                 <li id="bottombtn">
-                    <input type="submit" id="signout" class="signoutbtn btn-primary btn-xs" value="Sign Out" onclick="handleSignout();">
-                </li>
+                    <input type="submit" id="signout" class="signoutbtn btn-primary btn-xs" value="Sign Out" onclick="handleSignout();"> </li>
             </ul>
         </div>
-
-        
-		<div id="page-content-wrapper">
+        <div id="page-content-wrapper">
             <div class="container-fluid">
-                <a href="#menu-toggle" id="menu-toggle"><img src="img/logo.jpg" id="logonav"></a>
-                
-				
-				
-        <div class="row">
+                <a href="#menu-toggle" id="menu-toggle">
+                    <img src="img/logo.jpg" id="logonav"> </a>
+                <div class="row">
                     <div class="col-lg-6 col-md-6" style="text-align:right;">
-                       <img src="img/car3.png" class="carpic" style="width:40%;">
+                        <img src="img/car3.png" class="carpic" style="width:40%;"> </div>
+                    <div class="col-lg-6 col-md-6">
+                        <h3>Title</h3>
+                        <div>Description :
+                            <span id="des">AAABBBCCCDDD</span>
+                        </div>
+                        <div>Color :
+                            <span id="color">White</span>
+                        </div>
+                        <div>Type :
+                            <span id="type">Truck</span>
+                        </div>
+                        <div>Quantity :
+                            <span class="input-group number-spinner">
+                                <span class="input-group-btn">
+                                    <button class="btn btn-secondary" data-dir="dwn">-</button>
+                                </span>
+                                <div id="textme">
+                                    <input type="text" class="form-control text-center" value="1"> </div>
+                                <span class="input-group-btn">
+                                    <button class="btn btn-success" data-dir="up">+</button>
+                                </span>
+                            </span>
+                        </div>
+                        <div class="center">
+                            <div class="container"> </div>
+                            <button id="edit" class="btn btn-warning">Edit</button>
+                            <button id="remove" class="btn btn-danger">Remove</button>
+                        </div>
+                        <hr>
+                        <div id="result" style="text-align:right;">
+                            <h1>Amount
+                                <span id="amount">150.0</span>
+                            </h1>
+                            <h1>tax :
+                                <span id="tax">5.0</span>
+                            </h1>
+                            <h1>Total :
+                                <span id="total">155.0</span>
+                            </h1>
+                            <a href="payment.html">
+                                <button id="mk_payment" class="btn btn-success">Make Payment</button>
+                            </a>
+                        </div>
                     </div>
-
-            <div class="col-lg-6 col-md-6">
-                       <h3>Title</h3>
-							<div>Description :<span id="des">AAABBBCCCDDD</span></div>
-							<div>Color :<span id="color">White</span></div>
-							<div>Type :<span id="type">Truck</span></div>
-							<div>Quantity :
-								
-								<span class="input-group number-spinner">
-										<span class="input-group-btn">
-											<button class="btn btn-secondary" data-dir="dwn">-</button>
-										</span>
-										<div id="textme"><input type="text" class="form-control text-center" value="1"></div>
-										<span class="input-group-btn">
-											<button class="btn btn-success" data-dir="up">+</button>
-										</span>
-										
-										
-								</span>
-							</div>
-							
-						<div class="center">
-    
-							<div class="container">
-			
-								
-							</div>
-							<button id="edit" class="btn btn-warning">Edit</button>
-							<button id="remove" class="btn btn-danger">Remove</button>
-						</div>
-                
-<hr>
-				
-				
-				<div id="result" style="text-align:right;">
-					<h1>Amount  <span id="amount">150.0</span></h1>
-					<h1>tax : <span id="tax">5.0</span></h1>
-					<h1>Total : <span id="total">155.0</span></h1>
-					<a href="payment.html"><button id="mk_payment" class="btn btn-success">Make Payment</button></a>
-				</div>   
+                </div>
             </div>
-        </div>
- 
-
-    </div>
-
-    <script src="https://www.gstatic.com/firebasejs/4.12.0/firebase.js"></script>
-    <script>
-    // Initialize Firebase
-    var config = {
-        apiKey: "AIzaSyAU_68u90E0O_sFdLhCzHLJxeSnKmskUeU",
-        authDomain: "springbreak-df1b8.firebaseapp.com",
-        databaseURL: "https://springbreak-df1b8.firebaseio.com",
-        projectId: "springbreak-df1b8",
-        storageBucket: "springbreak-df1b8.appspot.com",
-        messagingSenderId: "442983166470"
-    };
-    firebase.initializeApp(config);
-    </script>
-    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-    <script src="js/functions.js"></script>
+            <script src="https://www.gstatic.com/firebasejs/4.12.0/firebase.js"></script>
+            <script>
+                // Initialize Firebase
+                var config = {
+                    apiKey: "AIzaSyAU_68u90E0O_sFdLhCzHLJxeSnKmskUeU",
+                    authDomain: "springbreak-df1b8.firebaseapp.com",
+                    databaseURL: "https://springbreak-df1b8.firebaseio.com",
+                    projectId: "springbreak-df1b8",
+                    storageBucket: "springbreak-df1b8.appspot.com",
+                    messagingSenderId: "442983166470"
+                };
+                firebase.initializeApp(config);
+            </script>
+            <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+            <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+            <script src="js/functions.js"></script>
 
 </body>
 
