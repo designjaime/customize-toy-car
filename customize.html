@@ -46,7 +46,7 @@
                             <img class="mb-2" src="http://via.placeholder.com/80x80">
                             <img src="http://via.placeholder.com/80x80"> </div>
                         <div class="col-10 text-center">
-                            <img src="img/car1-cropped.png" class="carpic modalable preview droppable" alt="DELUX R1 ROADSTER SET">
+                            <img src="" class="carpic modalable preview" id="car-img">
                             <div id="modal-img-popup" class="modal">
                                 <span class="close">&times;</span>
                                 <img class="modal-content preview">
@@ -59,8 +59,8 @@
                         <div class="col-7">
                             <div class="row">
                                 <div class="col">
-                                    <h5>DELUX R1 ROADSTER SET</h5>
-                                    <h6>$24.99</h6>
+                                    <h5 id="car-name"></h5>
+                                    <h6 id="car-price"></h6>
                                 </div>
                                 <div class="col text-left">
                                     <a href="cart.html">
@@ -168,8 +168,11 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase-firestore.js"></script>
+    <script src="js/firebase-controller.js?"></script>
     <script src="js/functions.js"></script>
-    <script src="js/slider.js"></script>
+    <!-- <script src="js/slider.js"></script> -->
 
 </body>
 

@@ -23,6 +23,3 @@ loadData(collection, function (snapshot) {
         }
     });
 });
-
-$("#customize-button").attr("href", "customize.html?collection=" + collection + "&docid=" + docId);
-$("#cart-button").attr("href", "cart.html?collection=" + collection + "&docid=" + docId);

@@ -48,7 +48,7 @@ loadData("trucks", function (snapshot) {
     });
 });
 
-// load trucks data from database.
+// load jeeps data from database.
 loadData("jeeps", function (snapshot) {
     snapshot.docs.forEach(function (doc) {
         $('#suv-car-items').append(singleItemDiv("jeeps", doc.id, doc.data().img));
