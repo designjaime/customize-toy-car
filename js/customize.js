@@ -1,3 +1,4 @@
+
 console.log(window.location.search);
 
 var urlParams = new URLSearchParams(window.location.search);
@@ -23,6 +24,3 @@ loadData(collection, function (snapshot) {
         }
     });
 });
-
-$("#customize-button").attr("href", "customize.html?collection=" + collection + "&docid=" + docId);
-$("#cart-button").attr("href", "cart.html?collection=" + collection + "&docid=" + docId);

@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style-1.css">
     <link rel="stylesheet" href="css/slider.css">
 
 </head>
@@ -39,122 +40,106 @@
             <div class="container-fluid">
                 <a href="#menu-toggle" id="menu-toggle">
                     <img src="img/logo.jpg" id="logonav"> </a>
+                <a href="cart.html" id="cart-button">
+                    <div class="btn btn-info btn-lg pull-right">Add to garage </div>
+                </a>
                 <div class="container">
                     <div class="row align-items-center" id="item-container">
-                        <div class="col-2">
-                            <img class="mb-2" src="http://via.placeholder.com/80x80">
-                            <img class="mb-2" src="http://via.placeholder.com/80x80">
-                            <img src="http://via.placeholder.com/80x80"> </div>
-                        <div class="col-10 text-center">
-                            <img src="img/car1-cropped.png" class="carpic modalable preview droppable" alt="DELUX R1 ROADSTER SET">
-                            <div id="modal-img-popup" class="modal">
-                                <span class="close">&times;</span>
-                                <img class="modal-content preview">
-                                <div class="modal-caption"></div>
-                            </div>
-                        </div>
+                        <div class="col text-center">
+                            <input type="color" value="#0000ff">
+                            <img src="" class="carpic modalable preview" id="car-img"> </div>
                     </div>
-                    <div class="row">
-                        <div class="col-5"></div>
-                        <div class="col-7">
-                            <div class="row">
-                                <div class="col">
-                                    <h5>DELUX R1 ROADSTER SET</h5>
-                                    <h6>$24.99</h6>
-                                </div>
-                                <div class="col text-left">
-                                    <a href="cart.html">
-                                        <div class="btn btn-info btn-lg">Add to garage </div>
-                                    </a>
-                                </div>
-                            </div>
+                    <div class="container">
+                        <div class="col">
+                            <h5 id="car-name"></h5>
+                            <h6 id="car-price"></h6>
                         </div>
-                    </div>
-                    <div class="container item-options">
-                        <ul class="nav nav-pills mb-5 row" id="pills-tab" role="tablist">
-                            <li class="col nav-item">
-                                <a class="nav-link active" id="pills-Color-tab" data-toggle="pill" href="#pills-Color" role="tab"
-                                    aria-controls="pills-Color" aria-selected="true">Paint & Pattern</a>
-                            </li>
-                            <li class="col nav-item">
-                                <a class="nav-link" id="pills-Stickers-tab" data-toggle="pill" href="#pills-Stickers" role="tab"
-                                    aria-controls="pills-Stickers" aria-selected="false">Stickers</a>
-                            </li>
-                            <li class="col nav-item">
-                                <a class="nav-link" id="pills-Sound-tab" data-toggle="pill" href="#pills-Sound" role="tab" aria-controls="pills-Sound"
-                                    aria-selected="false">Sound</a>
-                            </li>
-                            <li class="col nav-item">
-                                <a class="nav-link" id="pills-Wheels-tab" data-toggle="pill" href="#pills-Wheels" role="tab"
-                                    aria-controls="pills-Wheels" aria-selected="false">Wheels & Light</a>
-                            </li>
-                        </ul>
-                        <div class="tab-content" id="pills-tabContent">
-                            <div class="tab-pane fade show active" id="pills-Color" role="tabpanel" aria-labelledby="pills-Color-tab">
-                                <div id="js-slider"></div>
-                            </div>
-                            <div class="tab-pane fade text-center" id="pills-Sound" role="tabpanel" aria-labelledby="pills-Sound-tab">
-                                <div class="container">
-                                    <div class="row">
-                                        <p class="col-2">BMW Driveby</p>
-                                        <audio class="col-8" controls>
-                                            <source src="audio/BMW+DRIVEBY.mp3" type="audio/mp3"> </audio>
-                                        <button type="button col-2" class="btn btn-info btn-circle btn-lg">
-                                            <i class="fa fa-check"></i>
-                                    </div>
-                                    <div class="row">
-                                        <p class="col-2">Car geardown</p>
-                                        <audio class="col-8" controls>
-                                            <source src="audio/car+geardown.mp3" type="audio/mp3"> </audio>
-                                        <button type="button col-2" class="btn btn-info btn-circle btn-lg">
-                                            <i class="fa fa-check"></i>
-                                    </div>
-                                    <div class="row">
-                                        <p class="col-2">Car horn</p>
-                                        <audio class="col-8" controls>
-                                            <source src="audio/car+horn+x.mp3" type="audio/mp3"> </audio>
-                                        <button type="button col-2" class="btn btn-info btn-circle btn-lg">
-                                            <i class="fa fa-check"></i>
+                        <div class="container item-options">
+                            <ul class="nav nav-pills mb-5 row" id="pills-tab" role="tablist">
+                                <li class="col nav-item">
+                                    <a class="nav-link active" id="pills-Color-tab" data-toggle="pill" href="#pills-Color" role="tab"
+                                        aria-controls="pills-Color" aria-selected="true">Paint</a>
+                                </li>
+                                <li class="col nav-item">
+                                    <a class="nav-link" id="pills-Stickers-tab" data-toggle="pill" href="#pills-Stickers" role="tab"
+                                        aria-controls="pills-Stickers" aria-selected="false">Stickers</a>
+                                </li>
+                                <li class="col nav-item">
+                                    <a class="nav-link" id="pills-Sound-tab" data-toggle="pill" href="#pills-Sound" role="tab"
+                                        aria-controls="pills-Sound" aria-selected="false">Sound</a>
+                                </li>
+                                <li class="col nav-item">
+                                    <a class="nav-link" id="pills-Wheels-tab" data-toggle="pill" href="#pills-Wheels" role="tab"
+                                        aria-controls="pills-Wheels" aria-selected="false">Wheels & Light</a>
+                                </li>
+                            </ul>
+                            <div class="tab-content" id="pills-tabContent">
+                                <div class="tab-pane fade show active" id="pills-Color" role="tabpanel" aria-labelledby="pills-Color-tab">
+                                    <h5 class="text-center">Click the car and choose the color you want!</h5>
+                                </div>
+                                <div class="tab-pane fade text-center" id="pills-Sound" role="tabpanel" aria-labelledby="pills-Sound-tab">
+                                    <div class="container">
+                                        <div class="row">
+                                            <p class="col-2">BMW Driveby</p>
+                                            <audio class="col-8" controls>
+                                                <source src="audio/BMW+DRIVEBY.mp3" type="audio/mp3"> </audio>
+                                            <button type="button col-2" class="btn btn-info btn-circle btn-lg">
+                                                <i class="fa fa-check"></i>
+                                        </div>
+                                        <div class="row">
+                                            <p class="col-2">Car geardown</p>
+                                            <audio class="col-8" controls>
+                                                <source src="audio/car+geardown.mp3" type="audio/mp3"> </audio>
+                                            <button type="button col-2" class="btn btn-info btn-circle btn-lg">
+                                                <i class="fa fa-check"></i>
+                                        </div>
+                                        <div class="row">
+                                            <p class="col-2">Car horn</p>
+                                            <audio class="col-8" controls>
+                                                <source src="audio/car+horn+x.mp3" type="audio/mp3"> </audio>
+                                            <button type="button col-2" class="btn btn-info btn-circle btn-lg">
+                                                <i class="fa fa-check"></i>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="tab-pane fade" id="pills-Stickers" role="tabpanel" aria-labelledby="pills-Stickers-tab">
-                                <div class="row">
-                                    <div class="col-2">
-                                        <div class="draggable">
-                                            <img class="img-sticker" src="img/sticker-pokemon.png"> </div>
-                                    </div>
-                                    <div class="col-2">
-                                        <div class="draggable">
-                                            <img class="img-sticker" src="img/sticker-superman.png"> </div>
-                                    </div>
-                                    <div class="col-2">
-                                        <div class="draggable">
-                                            <img class="img-sticker" src="img/sticker-happy.png"> </div>
-                                    </div>
-                                    <div class="col-2">
-                                        <div class="draggable">
-                                            <img class="img-sticker" src="img/sticker-heart.png"> </div>
-                                    </div>
-                                    <div class="col-2">
-                                        <div class="draggable">
-                                            <img class="img-sticker" src="img/sticker-sad.png"> </div>
-                                    </div>
-                                    <div class="col-2">
-                                        <div class="draggable">
-                                            <img class="img-sticker" src="img/sticker-skull.png"> </div>
-                                    </div>
-                                    <div class="col-2">
-                                        <div class="draggable">
-                                            <img class="img-sticker" src="img/sticker-tiger.png"> </div>
-                                    </div>
-                                    <div class="col-2">
-                                        <div class="draggable">
-                                            <img class="img-sticker" src="img/sticker-tiger2.png"> </div>
-                                    </div>
-                                    <div class="col-2">
-                                        <div class="draggable">
-                                            <img class="img-sticker" src="img/sticker-stop.png"> </div>
+                                <div class="tab-pane fade" id="pills-Stickers" role="tabpanel" aria-labelledby="pills-Stickers-tab">
+                                    <div class="row">
+                                        <div class="col-2">
+                                            <div class="draggable">
+                                                <img class="img-sticker" src="img/sticker-pokemon.png"> </div>
+                                        </div>
+                                        <div class="col-2">
+                                            <div class="draggable">
+                                                <img class="img-sticker" src="img/sticker-superman.png"> </div>
+                                        </div>
+                                        <div class="col-2">
+                                            <div class="draggable">
+                                                <img class="img-sticker" src="img/sticker-happy.png"> </div>
+                                        </div>
+                                        <div class="col-2">
+                                            <div class="draggable">
+                                                <img class="img-sticker" src="img/sticker-heart.png"> </div>
+                                        </div>
+                                        <div class="col-2">
+                                            <div class="draggable">
+                                                <img class="img-sticker" src="img/sticker-sad.png"> </div>
+                                        </div>
+                                        <div class="col-2">
+                                            <div class="draggable">
+                                                <img class="img-sticker" src="img/sticker-skull.png"> </div>
+                                        </div>
+                                        <div class="col-2">
+                                            <div class="draggable">
+                                                <img class="img-sticker" src="img/sticker-tiger.png"> </div>
+                                        </div>
+                                        <div class="col-2">
+                                            <div class="draggable">
+                                                <img class="img-sticker" src="img/sticker-tiger2.png"> </div>
+                                        </div>
+                                        <div class="col-2">
+                                            <div class="draggable">
+                                                <img class="img-sticker" src="img/sticker-stop.png"> </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -163,13 +148,16 @@
                 </div>
             </div>
         </div>
-    </div>
-    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-    <script src="js/functions.js"></script>
-    <script src="js/slider.js"></script>
+        <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase-firestore.js"></script>
+        <script src="js/firebase-controller.js?"></script>
+        <script src="js/functions.js"></script>
+        <!-- <script src="js/slider.js"></script> -->
+        <script src="js/car-init.js?"></script>
 
 </body>
 

@@ -155,12 +155,12 @@ input[type="text"]:focus{
   text-align: center;
 }
 
-#item-container {
-  margin-top:100px; 
-}
-.item-options{
+/* #item-container {
+  margin-top:60px; 
+} */
+/* .item-options{
   margin-top:50px; 
-}
+} */
 
 /*thumbnail img*/
 #myImg {
