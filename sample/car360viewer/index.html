@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>car viewer</title>
+	<script>
+		function getimg(){
+			setInterval(function(){imgfun()},100);
+		}
+		
+		function imgfun(){
+			var imgvalu=document.getElementById("imgrange").value;
+			document.getElementById("imgg").src="images/"+imgvalu+".jpg";
+
+		}
+	</script>
+</head>
+<body onload="getimg()">
+	<center>
+		<img src="" width="640" height="434" id="imgg" style="border: 2px solid black;">
+		<br>
+		<input type="range" value="1" min="1" max="17" id="imgrange">
+	</center>
+
+	
+
+
+</body>
+</html>
