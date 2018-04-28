@@ -1,133 +1,182 @@
-//Get all label
-var wrap = document.querySelector(".wrap");
-var car = document.querySelector(".car");
-var gamestart = document.querySelector(".gameStart")
-var gameOver = document.querySelector(".gameOver")
-var startbtn = document.querySelector(".stratbtn")
-var overbtn = document.querySelector(".overbtn")
-var sc = document.querySelector(".sc")
-var his = document.querySelector(".his")
-var fs = document.querySelector(".fs")
-    //race car form
-car.innerHTML = "<img src='img/blue.png' width='150' height='220'>"
-	//Car start point
-var saicheArr = ['0px',
-    '150px',
-    '300px'
-];
-var speedTemp = 1; /*car moving distance*/
-var score = 0; /*score*/
-var timeraaaa = 2300; /*create car time*/
-var Timer1 = null; /*car moving timer*/
-var flag = true; /*keyboard switch flag*/
+/*Tutorail by* Arshad Muhammed */
+/*Link: https://www.youtube.com/watch?v=oWaGkW1YDmk */
+$(function(){
 
-//random get car's position
-function rand() {
-    return Math.floor(Math.random() * 3);
-}
+    var anim_id;
 
-//random create other cars
-function createCar() {
-    //  console.log(timer);
-    var cars = document.createElement('div');
-    cars.className = 'cars';
-    cars.innerHTML = "<img src='img/red.png' width='150' height='220'>"
-	
+/*Variables*/
+    var container = $('#container');
+    var car = $('#car');
+    var car_1 = $('#car_1');
+    var car_2 = $('#car_2');
+    var car_3 = $('#car_3');
+	var car_4 = $('#car_4');
+    var line_1 = $('#line_1');
+    var line_2 = $('#line_2');
+    var line_3 = $('#line_3');
+    var restart_div = $('#restart_div');
+    var restart_btn = $('#restart');
+    var score = $('#score');
 
-    cars.style.left = saicheArr[rand()];
-    cars.style.top = '-200px';
-    wrap.appendChild(cars);
-    //car moving
-    cars.speed = -200;
-    cars.Timer = setInterval(function() {
-        cars.speed += speedTemp;
-        cars.style.top = cars.speed + 'px';
-        if(cars.offsetTop > 800) {
-            clearInterval(cars.Timer);
-            wrap.removeChild(cars);
-            score += 1;
-            fs.innerHTML = score;
+    //saving some initial setup
+    var container_left = parseInt(container.css('left'));
+    var container_width = parseInt(container.width());
+    var container_height = parseInt(container.height());
+    var car_width = parseInt(car.width());
+    var car_height = parseInt(car.height());
+
+    //some other declarations
+    var game_over = false;
+
+    var score_counter = 1;
+
+    var speed = 2;
+    var line_speed = 5;
+
+    var move_right = false;
+    var move_left = false;
+    var move_up = false;
+    var move_down = false;
+
+/* ------------GAME STARTS---------------*/
+
+    $(document).on('keydown', function(e) {
+        if (game_over === false) {
+            var key = e.keyCode;
+            if (key === 37 && move_left === false) {
+                move_left = requestAnimationFrame(left);
+            } else if (key === 39 && move_right === false) {
+                move_right = requestAnimationFrame(right);
+            } else if (key === 38 && move_up === false) {
+                move_up = requestAnimationFrame(up);
+            } else if (key === 40 && move_down === false) {
+                move_down = requestAnimationFrame(down);
+            }
         }
+    });
 
-        //determ the game over
-        if(car.offsetTop <= (cars.offsetTop + 200) && car.offsetLeft == cars.offsetLeft) {
-            console.log('Hit')
-            gameover();
+    $(document).on('keyup', function(e) {
+        if (game_over === false) {
+            var key = e.keyCode;
+            if (key === 37) {
+                cancelAnimationFrame(move_left);
+                move_left = false;
+            } else if (key === 39) {
+                cancelAnimationFrame(move_right);
+                move_right = false;
+            } else if (key === 38) {
+                cancelAnimationFrame(move_up);
+                move_up = false;
+            } else if (key === 40) {
+                cancelAnimationFrame(move_down);
+                move_down = false;
+            }
         }
-    }, 5)
+    });
 
-}
-//GAME START
-startbtn.onclick = function() {
-        createCar();
-        Timer1 = setInterval("createCar()", timeraaaa);
-        gamestart.style.display = 'none';
-    }
-//RESTART
-overbtn.onclick = function() {
-        history.go('0');
-    }
-//KEYBOARD INPUT EVENT
-document.onkeydown = function() {
-        var event = event || window.event;
-        var left = car.offsetLeft
-        switch(event.keyCode) {
-            case 37:
-                if(left == 0) {
-                    car.style.left = '0px';
-                } else {
-
-                    car.style.left = left - 150 + 'px';
-                }
-                break;
-            case 39:
-                if(left == 300) {
-                    car.style.left = '300px';
-                } else {
-                    car.style.left = left + 150 + 'px';
-                }
-                break;
-            case 38:
-                speedTemp = 3;
-                if(flag) {
-                    clearInterval(Timer1);
-                    timeraaaa = 850;
-                    Timer1 = setInterval("createCar()", timeraaaa);
-                    flag = false;
-                }
-                console.log(timeraaaa);
-
-                break;
+    function left() {
+        if (game_over === false && parseInt(car.css('left')) > 0) {
+            car.css('left', parseInt(car.css('left')) - 5);
+            move_left = requestAnimationFrame(left);
         }
     }
-//RELEASE KEYBOARD EVENT
-document.onkeyup = function() {
-        var ev = event || window.event;
-        if(ev.keyCode == 38) {
-            speedTemp = 1;
-            clearInterval(Timer1);
-            timeraaaa = 2300;
-            Timer1 = setInterval("createCar()", timeraaaa);
-            flag = true;
+
+    function right() {
+        if (game_over === false && parseInt(car.css('left')) < container_width - car_width) {
+            car.css('left', parseInt(car.css('left')) + 5);
+            move_right = requestAnimationFrame(right);
         }
     }
-//Game OVER
-function gameover() {
-    sc.innerHTML += score;
-    gameOver.style.display = 'block';
-    clearTimer();
-//HISTORY
-    var historyScore = localStorage.getItem('his');
-    if(historyScore == null || historyScore < score) {
-        localStorage.setItem('his', score);
-        historyScore = score;
+
+    function up() {
+        if (game_over === false && parseInt(car.css('top')) > 0) {
+            car.css('top', parseInt(car.css('top')) - 3);
+            move_up = requestAnimationFrame(up);
+        }
     }
-    his.innerHTML = historyScore;
-}
-//CLEAR TIMER
-function clearTimer() {
-    var timer = setInterval(function() {}, 30);
-    for(var i = 0; i < timer; i++) {
-        clearInterval(i);
+
+    function down() {
+        if (game_over === false && parseInt(car.css('top')) < container_height - car_height) {
+            car.css('top', parseInt(car.css('top')) + 3);
+            move_down = requestAnimationFrame(down);
+        }
     }
-}
+
+/*lines & Component*/
+    anim_id = requestAnimationFrame(repeat);
+
+    function repeat() {
+        if (collision(car, car_1) || collision(car, car_2) || collision(car, car_3)|| collision(car, car_4)) {
+            stop_the_game();
+            return;
+        }
+
+        score_counter++;
+
+        car_down(car_1);
+        car_down(car_2);
+        car_down(car_3);
+		car_down(car_4);
+
+        line_down(line_1);
+        line_down(line_2);
+        line_down(line_3);
+
+        anim_id = requestAnimationFrame(repeat);
+    }
+
+    function car_down(car) {
+        var car_current_top = parseInt(car.css('top'));
+        if (car_current_top > container_height) {
+            car_current_top = -200;
+            var car_left = parseInt(Math.random() * (container_width - car_width));
+            car.css('left', car_left);
+        }
+        car.css('top', car_current_top + speed);
+    }
+
+    function line_down(line) {
+        var line_current_top = parseInt(line.css('top'));
+        if (line_current_top > container_height) {
+            line_current_top = -300;
+        }
+        line.css('top', line_current_top + line_speed);
+    }
+
+    restart_btn.click(function() {
+        location.reload();
+    });
+
+    function stop_the_game() {
+        game_over = true;
+        cancelAnimationFrame(anim_id);
+        cancelAnimationFrame(move_right);
+        cancelAnimationFrame(move_left);
+        cancelAnimationFrame(move_up);
+        cancelAnimationFrame(move_down);
+        restart_div.slideDown();
+        restart_btn.focus();
+    }
+
+/* ------------------------------COLISSION --------------------------------- */
+    function collision($div1, $div2) {
+        var x1 = $div1.offset().left;
+        var y1 = $div1.offset().top;
+        var h1 = $div1.outerHeight(true);
+        var w1 = $div1.outerWidth(true);
+        var b1 = y1 + h1;
+        var r1 = x1 + w1;
+        var x2 = $div2.offset().left;
+        var y2 = $div2.offset().top;
+        var h2 = $div2.outerHeight(true);
+        var w2 = $div2.outerWidth(true);
+        var b2 = y2 + h2;
+        var r2 = x2 + w2;
+
+        if (b1 < y2 || y1 > b2 || r1 < x2 || x1 > r2) return false;
+        return true;
+    }
+
+
+
+});
