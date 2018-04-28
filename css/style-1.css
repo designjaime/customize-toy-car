@@ -1,31 +1,29 @@
 html {
-  
   font-family: 'Roboto', sans-serif;
   -webkit-font-smoothing: antialiased;
   padding: 20px 0;
 }
+
 .title {
- font-size: 2.5em;
+  font-size: 2.5em;
 }
+
 .band {
   width: 90%;
   max-width: 1240px;
   margin: 0 auto;
-  
   display: grid;
-  
   grid-template-columns: 1fr;
   grid-template-rows: auto;
   grid-gap: 20px;
-  
 }
 
 @media only screen and (min-width: 500px) {
   .band {
     grid-template-columns: 1fr 1fr;
-  }  
+  }
   .item-1-container {
-  grid-column: 1/ span 2;
+    grid-column: 1/ span 2;
   }
   .item-1 h1 {
     font-size: 30px;
@@ -43,7 +41,7 @@ html {
 .card {
   min-height: 100%;
   background: white;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   display: flex;
   flex-direction: column;
   text-decoration: none;
@@ -55,31 +53,31 @@ html {
 
 .front-item:hover {
   top: -2px;
-  box-shadow: 0 4px 5px rgba(0,0,0,0.2);
+  box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
 }
 
 .card article {
   padding: 20px;
   display: flex;
-  
   flex: 1;
   justify-content: space-between;
   flex-direction: column;
-  
 }
+
 .card .thumb {
   padding-bottom: 60%;
   background-size: cover;
   background-position: center center;
-
 }
 
-.card p { 
-  flex: 1; /* make p grow to fill available space*/
+.card p {
+  flex: 1;
+  /* make p grow to fill available space*/
   line-height: 1.4;
 }
 
 /* typography */
+
 h1 {
   font-size: 20px;
   margin: 0;
@@ -99,22 +97,26 @@ h1 {
   display: none;
 }
 
-.band{
-    margin-top: 60px;
+.band {
+  margin-top: 60px;
 }
-input { 
+
+input {
   /* removes default styling from input color element */
   padding: 0;
-  border: none; 
+  border: none;
   /* makes input (color swatch) 100% size of container */
   position: absolute;
-  width: 76%; 
+  width: 76%;
   height: 100%;
   /* mix blend mode makes the color of the swatch alter the image behind it. */
-  mix-blend-mode: hue; /* try screen, multiply or other blend modes for different effects */
+  mix-blend-mode: hue;
+  /* try screen, multiply or other blend modes for different effects */
   cursor: pointer;
 }
+
 /* removes default styling from input color element */
+
 ::-webkit-color-swatch {
   border: none;
 }
