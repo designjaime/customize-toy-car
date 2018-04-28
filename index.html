@@ -9,15 +9,119 @@
     <title>customize toycar</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/signin.css">
 
 </head>
 
 <body>
-    <div class="logo">
+    <div class="container">
+        <div class="logo">
+            <a href="home.html">
+                <img src="img/logo.jpg" style="width: 200px;"> </a>
+        </div>
+        <!-- <nav class="main-nav">
+            <ul>
+                <li>
+                    <a class="signin" href="#0">Sign in</a>
+                </li>
+                <li>
+                    <a class="signup" href="#0">Sign up</a>
+                </li>
+            </ul>
+        </nav> -->
+        <div class="user-modal">
+            <div class="user-modal-container">
+                <ul class="switcher">
+                    <li>
+                        <a href="#0">Sign in</a>
+                    </li>
+                    <li>
+                        <a href="#0">New account</a>
+                    </li>
+                </ul>
+                <div id="login">
+                    <form class="form">
+                        <p class="fieldset">
+                            <label class="image-replace email" for="signin-email">E-mail</label>
+                            <input class="full-width has-padding has-border" id="signin-email" type="email"
+                                placeholder="E-mail">
+                            <span class="error-message">An account with this email address does not exist!</span>
+                        </p>
+                        <p class="fieldset">
+                            <label class="image-replace password" for="signin-password">Password</label>
+                            <input class="full-width has-padding has-border" id="signin-password" type="password"
+                                placeholder="Password">
+                            <a href="#0" class="hide-password">Show</a>
+                            <span class="error-message">Wrong password! Try again.</span>
+                        </p>
+                        <p class="fieldset">
+                            <input type="checkbox" id="remember-me" checked>
+                            <label for="remember-me">Remember me</label>
+                        </p>
+                        <p class="fieldset">
+                            <input class="full-width" type="submit" value="Login"> </p>
+                    </form>
+                    <p class="form-bottom-message">
+                        <a href="#0">Forgot your password?</a>
+                    </p>
+                    <!-- <a href="#0" class="close-form">Close</a> -->
+                </div>
+                <div id="signup">
+                    <form class="form">
+                        <p class="fieldset">
+                            <label class="image-replace username" for="signup-username">Username</label>
+                            <input class="full-width has-padding has-border" id="signup-username" type="text"
+                                placeholder="Username">
+                            <span class="error-message">Your username can only contain numeric and alphabetic symbols!</span>
+                        </p>
+                        <p class="fieldset">
+                            <label class="image-replace email" for="signup-email">E-mail</label>
+                            <input class="full-width has-padding has-border" id="signup-email" type="email"
+                                placeholder="E-mail">
+                            <span class="error-message">Enter a valid email address!</span>
+                        </p>
+                        <p class="fieldset">
+                            <label class="image-replace password" for="signup-password">Password</label>
+                            <input class="full-width has-padding has-border" id="signup-password" type="password"
+                                placeholder="Password">
+                            <a href="#0" class="hide-password">Show</a>
+                            <span class="error-message">Your password has to be at least 6 characters long!</span>
+                        </p>
+                        <p class="fieldset">
+                            <input type="checkbox" id="accept-terms">
+                            <label for="accept-terms">I agree to the
+                                <a class="accept-terms" href="#0">Terms</a>
+                            </label>
+                        </p>
+                        <p class="fieldset">
+                            <input class="full-width has-padding" type="submit" value="Create account"> </p>
+                    </form>
+                    <!-- <a href="#0" class="cd-close-form">Close</a> -->
+                </div>
+                <div id="reset-password">
+                    <p class="form-message">Lost your password? Please enter your email address.</br> You will receive a link to create a new password.</p>
+                    <form class="form">
+                        <p class="fieldset">
+                            <label class="image-replace email" for="reset-email">E-mail</label>
+                            <input class="full-width has-padding has-border" id="reset-email" type="email"
+                                placeholder="E-mail">
+                            <span class="error-message">An account with this email does not exist!</span>
+                        </p>
+                        <p class="fieldset">
+                            <input class="full-width has-padding" type="submit" value="Reset password"> </p>
+                    </form>
+                    <p class="form-bottom-message">
+                        <a href="#0">Back to log-in</a>
+                    </p>
+                </div>
+                <a href="#0" class="close-form">Close</a>
+            </div>
+        </div>
+    </div>
+    <!-- <div class="logo">
         <a href="home.html">
             <img src="img/logo.jpg" style="width: 200px;"> </a>
-    </div>
+    </div>  
     <div class="container">
         <div class="input_control">
             <div role="form" id="signupform">
@@ -33,25 +137,16 @@
                     <input type="submit" id="googlelogin" class="btn-primary" value="Google Login" onclick="handlegooglelogin();"> </div>
             </div>
         </div>
-        <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
-        <script>
-            // Initialize Firebase
-            var config = {
-                apiKey: "AIzaSyDGcInocp3B9uScWtFj_1l4EJRfJBJFLX0",
-                authDomain: "carstomize-ed240.firebaseapp.com",
-                databaseURL: "https://carstomize-ed240.firebaseio.com",
-                projectId: "carstomize-ed240",
-                storageBucket: "carstomize-ed240.appspot.com",
-                messagingSenderId: "873421605960"
-            };
-            firebase.initializeApp(config);
-        </script>
-        <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-        <script src="js/functions.js"></script>
-        <script src="js/auth.js"></script>
+    </div> -->
+    <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="js/firebase-controller.js"></script>
+    <script src="js/functions.js"></script>
+    <script src="js/signin.js"></script>
+    <script src="js/auth.js"></script>
 
 </body>
 
