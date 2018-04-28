@@ -101,7 +101,7 @@ h1 {
   margin-top: 60px;
 }
 
-input {
+#car-img-overlay {
   /* removes default styling from input color element */
   padding: 0;
   border: none;
