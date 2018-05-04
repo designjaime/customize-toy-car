@@ -14,6 +14,7 @@
 </head>
 
 <body>
+    <div id="fb-root"></div>
     <div class="container">
         <div class="logo">
             <a href="home.html">
@@ -59,7 +60,7 @@
                             <label for="remember-me">Remember me</label>
                         </p>
                         <p class="fieldset">
-                            <input class="full-width" type="submit" value="Login"> </p>
+                            <input class="full-width" type="submit" value="Login" onclick="handleSignin();"> </p>
                     </form>
                     <p class="form-bottom-message">
                         <a href="#0">Forgot your password?</a>
@@ -68,24 +69,24 @@
                 </div>
                 <div id="signup">
                     <form class="form">
-                        <p class="fieldset">
+                        <!-- <p class="fieldset">
                             <label class="image-replace username" for="signup-username">Username</label>
                             <input class="full-width has-padding has-border" id="signup-username" type="text"
                                 placeholder="Username">
                             <span class="error-message">Your username can only contain numeric and alphabetic symbols!</span>
-                        </p>
+                        </p> -->
                         <p class="fieldset">
                             <label class="image-replace email" for="signup-email">E-mail</label>
                             <input class="full-width has-padding has-border" id="signup-email" type="email"
                                 placeholder="E-mail">
-                            <span class="error-message">Enter a valid email address!</span>
+                            <!-- <span class="error-message">Enter a valid email address!</span> -->
                         </p>
                         <p class="fieldset">
                             <label class="image-replace password" for="signup-password">Password</label>
                             <input class="full-width has-padding has-border" id="signup-password" type="password"
                                 placeholder="Password">
                             <a href="#0" class="hide-password">Show</a>
-                            <span class="error-message">Your password has to be at least 6 characters long!</span>
+                            <!-- <span class="error-message">Your password has to be at least 6 characters long!</span> -->
                         </p>
                         <p class="fieldset">
                             <input type="checkbox" id="accept-terms">
@@ -94,7 +95,7 @@
                             </label>
                         </p>
                         <p class="fieldset">
-                            <input class="full-width has-padding" type="submit" value="Create account"> </p>
+                            <input class="full-width has-padding" type="submit" value="Create account" onclick="handleSignup();"> </p>
                     </form>
                     <!-- <a href="#0" class="cd-close-form">Close</a> -->
                 </div>
@@ -105,7 +106,7 @@
                             <label class="image-replace email" for="reset-email">E-mail</label>
                             <input class="full-width has-padding has-border" id="reset-email" type="email"
                                 placeholder="E-mail">
-                            <span class="error-message">An account with this email does not exist!</span>
+                            <!-- <span class="error-message">An account with this email does not exist!</span> -->
                         </p>
                         <p class="fieldset">
                             <input class="full-width has-padding" type="submit" value="Reset password"> </p>
@@ -116,6 +117,12 @@
                 </div>
                 <a href="#0" class="close-form">Close</a>
             </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="text-center">
+            <div class="fb-login-button" data-max-rows="1" data-size="large" data-button-type="continue_with" data-show-faces="false"
+                data-auto-logout-link="false" data-use-continue-as="false"></div>
         </div>
     </div>
     <!-- <div class="logo">
