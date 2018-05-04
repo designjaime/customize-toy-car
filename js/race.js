@@ -112,6 +112,13 @@ $(function(){
         }
 
         score_counter++;
+		if (score_counter % 20 == 0) {
+            score.text(parseInt(score.text()) + 1);
+        }
+        if (score_counter % 200 == 0) {
+            speed++;
+            line_speed++;
+        }
 
         car_down(car_1);
         car_down(car_2);
@@ -177,6 +184,29 @@ $(function(){
         return true;
     }
 
-
+$(function(){
+	var car = document.getElementById("car");
+    var hammertime = Hammer(car);
+	hammertime.get('swipe').set({
+    direction: Hammer.DIRECTION_ALL
+	});
+	
+	hammertime.on("swipeleft", function() {
+		  $(car).animate({left: "-=75"}, 50)  
+    });
+	
+    hammertime.on("swiperight", function() {
+          $(car).animate({left: "+=75"}, 50)  
+    });
+	
+	hammertime.on("swipeup", function() {
+		  $(car).animate({top: "-=75"}, 50)
+	car.get('swipeup').set({ direction: car.DIRECTION_ALL });
+	      		  
+    });
+	hammertime.on("swipedown", function() {
+          $(car).animate({top: "+=75"}, 50)  
+    });
+})
 
 });

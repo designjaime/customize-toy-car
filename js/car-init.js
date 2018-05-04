@@ -9,8 +9,8 @@ var carImgUrl;
 console.log(collection);
 console.log(docId);
 
-loadData(collection, function(snapshot) {
-  snapshot.docs.forEach(function(doc) {
+loadData(collection, function (snapshot) {
+  snapshot.docs.forEach(function (doc) {
     if (doc.id === docId) {
       console.log('Found it !!! ' + doc.data().img);
       console.log(doc.data().name);
@@ -29,3 +29,5 @@ loadData(collection, function(snapshot) {
 
 $("#customize-button").attr("href", "customize.html?collection=" + collection + "&docid=" + docId);
 $("#cart-button").attr("href", "cart.html?collection=" + collection + "&docid=" + docId);
+
+
