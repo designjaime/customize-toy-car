@@ -18,6 +18,8 @@ loadData(collection, function (snapshot) {
       console.log(doc.data().description);
 
       carImgUrl = doc.data().img;
+      // only used by customize page to set slider max.
+      $("#car-img-range").attr('max', doc.data().num_of_img);
 
       $('#car-name').html(doc.data().name);
       $('#car-price').html(doc.data().price);
