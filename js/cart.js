@@ -6,6 +6,7 @@ var collection = urlParams.get('collection');
 var docId = urlParams.get('docid');
 var shipping = 6.00;
 
+
 console.log(collection);
 console.log(docId);
 
@@ -19,6 +20,7 @@ loadData(collection, function (snapshot) {
 
             $('#car-name').html(doc.data().name);
             $('.car-price').text(doc.data().price);
+
             $('#tax').html((doc.data().price * 0.09).toFixed(2));
             $('#total').html((doc.data().price * 1.09 + shipping).toFixed(2));
             $('#car-img').attr('src', doc.data().img);
@@ -29,3 +31,6 @@ loadData(collection, function (snapshot) {
 $("#cart-button").attr("href", "cart.html?collection=" + collection + "&docid=" + docId);
 $("#edit-button").attr("href", "customize.html?collection=" + collection + "&docid=" + docId);
 
+$(".product-quantity input").on('click', function () {
+    $(".car-price").text($(".car-price").val() * $(".number").val());
+});

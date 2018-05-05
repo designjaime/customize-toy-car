@@ -14,7 +14,6 @@
 </head>
 
 <body>
-    <div id="fb-root"></div>
     <div class="container">
         <div class="logo">
             <a href="home.html">
@@ -121,8 +120,9 @@
     </div>
     <div class="container">
         <div class="text-center">
-            <div class="fb-login-button" data-max-rows="1" data-size="large" data-button-type="continue_with" data-show-faces="false"
-                data-auto-logout-link="false" data-use-continue-as="false"></div>
+            <div class="input_control">
+                <input type="submit" id="fblogin" class="btn-primary" value="Facebook Login" onclick="handleFBlogin();">
+                <input type="submit" id="googlelogin" class="btn-primary" value="Google Login" onclick="handlegooglelogin();"> </div>
         </div>
     </div>
     <!-- <div class="logo">
