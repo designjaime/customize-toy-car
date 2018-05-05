@@ -17,7 +17,7 @@ $(function(){
     var restart_div = $('#restart_div');
     var restart_btn = $('#restart');
     var score = $('#score');
-
+	
     //saving some initial setup
     var container_left = parseInt(container.css('left'));
     var container_width = parseInt(container.width());
@@ -110,7 +110,7 @@ $(function(){
             stop_the_game();
             return;
         }
-
+		
         score_counter++;
 		if (score_counter % 20 == 0) {
             score.text(parseInt(score.text()) + 1);
@@ -119,7 +119,7 @@ $(function(){
             speed++;
             line_speed++;
         }
-
+		
         car_down(car_1);
         car_down(car_2);
         car_down(car_3);
@@ -165,6 +165,18 @@ $(function(){
         restart_btn.focus();
     }
 
+	function gameover() {
+    sc.innerHTML += score;
+    gameOver.style.display = 'block';
+    clearTimer();
+    //历史积分
+    var historyScore = localStorage.getItem('his');
+    if(historyScore == null || historyScore < score) {
+        localStorage.setItem('his', score);
+        historyScore = score;
+    }
+    his.innerHTML = historyScore;
+}
 /* ------------------------------COLISSION --------------------------------- */
     function collision($div1, $div2) {
         var x1 = $div1.offset().left;
@@ -183,7 +195,7 @@ $(function(){
         if (b1 < y2 || y1 > b2 || r1 < x2 || x1 > r2) return false;
         return true;
     }
-
+/*-------------------------------Hammer.JS--------------------------------- */
 $(function(){
 	var car = document.getElementById("car");
     var hammertime = Hammer(car);
