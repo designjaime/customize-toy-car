@@ -2,6 +2,8 @@
   margin: 0;
   padding: 0;
 }
+h1 {
+  font-family: 'Do Hyeon', sans-serif;}
 
 body {
   overflow-x: hidden;
@@ -10,11 +12,8 @@ body {
 html {
   text-align: center;
 }
-
-.logo {
-  margin-top: 100px;
-  margin-bottom: 100px;
-  text-align: center;
+.logo{
+  max-width: 120px;
 }
 
 /* .input_control {
@@ -75,9 +74,6 @@ input[type="text"]:focus {
   padding-left: 250px;
 }
 
-#logonav {
-  max-width: 200px;
-}
 
 #sidebar-wrapper {
   z-index: 1000;
@@ -382,3 +378,51 @@ hr {
   color: #333;
   background-color: #333; 
 }
+
+/* 
+Extra small devices (portrait phones, less than 544px) 
+No media query since this is the default in Bootstrap because it is "mobile first"
+*/
+h1 {font-size:1.8rem;} /*1rem = 16px*/
+h2 {font-size:1.2rem;} /*1rem = 16px*/
+/*
+####################################################
+M E D I A  Q U E R I E S
+####################################################
+*/
+
+/*
+::::::::::::::::::::::::::::::::::::::::::::::::::::
+Bootstrap 4 breakpoints
+*/
+/* Small devices (landscape phones, 544px and up) */
+@media (min-width: 544px) {  
+  h1 {font-size:2.0rem;}
+
+  
+   /*1rem = 16px*/
+}
+
+/* Medium devices (tablets, 768px and up) The navbar toggle appears at this breakpoint */
+@media (min-width: 768px) {  
+  h1 {font-size:2.2rem;}
+  /*1rem = 16px*/
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) { 
+  h1 {font-size:2.5rem;}
+  .logo{
+    max-width: 100%;
+  }
+    
+  } /*1rem = 16px*/
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {  
+  h1 {font-size:3rem;} /*1rem = 16px*/    
+  h2 {font-size:1.5rem;} /*1rem = 16px*/
+}
+
+
