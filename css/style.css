@@ -3,7 +3,7 @@
   padding: 0;
 }
 h1 {
-  font-family: 'Do Hyeon', sans-serif;}
+font-family: 'Do Hyeon', sans-serif;}
 
 body {
   overflow-x: hidden;
@@ -416,7 +416,7 @@ Bootstrap 4 breakpoints
     max-width: 100%;
   }
     
- 
+  } /*1rem = 16px*/
 }
 
 /* Extra large devices (large desktops, 1200px and up) */

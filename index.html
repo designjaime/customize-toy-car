@@ -14,6 +14,14 @@
 </head>
 
 <body>
+    <div id="fb-root"></div>
+    <script>(function (d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s); js.id = id;
+            js.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.0&appId=1766314853464773&autoLogAppEvents=1';
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));</script>
     <div class="container">
         <div class="logo">
             <a href="home.html">
@@ -107,10 +115,11 @@
     </div>
     <div class="container">
         <div class="text-center">
-            <div class="input_control">
+            <div class="fb-login-button" id="fblogin" data-max-rows="1" data-size="large" data-button-type="continue_with" data-show-faces="false"
+                data-auto-logout-link="false" data-use-continue-as="false" value="Facebook Login" onclick="handleFBlogin();"></div>
+            <!-- <div class="input_control">
                 <input type="submit" id="fblogin" class="btn-primary" value="Facebook Login" onclick="handleFBlogin();">
-                <input type="submit" id="googlelogin" class="btn-primary" value="Google Login" onclick="handlegooglelogin();"> </div>
-        </div>
+                <input type="submit" id="googlelogin" class="btn-primary" value="Google Login" onclick="handlegooglelogin();"> </div> --></div>
     </div>
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
