@@ -16,52 +16,9 @@ html {
   max-width: 120px;
 }
 
-/* .input_control {
-  width: 360px;
-  margin: 20px auto;
+.car-init-body{
+  margin-top:100px;
 }
-
-input[type="text"],
-input[type="email"],
-input[type="password"],
-#btn,
-#signup,
-#signin,
-#signout,
-#fblogin,
-#googlelogin,
-#twitterlogin {
-  box-sizing: border-box;
-  text-align: center;
-  font-size: 1.4em;
-  height: 2.7em;
-  border-radius: 4px;
-  border: 1px solid #c8cccf;
-  color: #6a6f77;
-  -web-kit-appearance: none;
-  -moz-appearance: none;
-  display: block;
-  outline: 0;
-  padding: 0 1em;
-  text-decoration: none;
-  width: 100%;
-}
-
-input[type="text"]:focus {
-  border: 1px solid #ff7496;
-}
-
-#btn,
-#signup,
-#signin,
-#signout,
-#fblogin,
-#googlelogin,
-#twitterlogin {
-  color: white;
-  background: #6a6f77;
-} */
-
 #wrapper {
   padding-left: 0;
   -webkit-transition: all 0.5s ease;
@@ -159,15 +116,7 @@ input[type="text"]:focus {
   text-align: center;
 }
 
-/* #item-container {
-  margin-top:60px; 
-} */
 
-/* .item-options{
-  margin-top:50px; 
-} */
-
-/*thumbnail img*/
 
 #myImg {
   border-radius: 5px;

@@ -40,21 +40,17 @@
             <div class="container-fluid">
                 <a href="#menu-toggle" id="menu-toggle">
                     <img src="img/logo.png" id="logonav"> </a>
-                <div class="container">
-                    <div class="row align-items-center" id="item-container">
-                        <div class="col-sm-1">
-                            <img class="mb-2" src="http://via.placeholder.com/70x70">
-                            <img class="mb-2" src="http://via.placeholder.com/70x70">
-                            <img src="http://via.placeholder.com/70x70"> </div>
-                        <div class="col-sm-6 text-center">
-                            <img src="" class="carpic modalable preview" id="car-img">
+                <div class="car-init-body container">
+                    <div class="row">
+                        <div class="col-lg-6 text-center">
+                            <img src="" class="img-responsive carpic modalable preview" id="car-img" style="max-width:90%;">
                             <div id="modal-img-popup" class="modal">
                                 <span class="close">&times;</span>
                                 <img class="modal-content preview">
                                 <div class="modal-caption"></div>
                             </div>
                         </div>
-                        <div class="col-sm-5">
+                        <div class="col-lg-6">
                             <h2 class="mb-3" id="car-name"></h2>
                             <span class="fa fa-star checked"></span>
                             <span class="fa fa-star checked"></span>
@@ -91,17 +87,16 @@
                 </div>
             </div>
         </div>
-    </div>
-    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase-firestore.js"></script>
-    <script src="js/firebase-controller.js?"></script>
-    <script src="js/functions.js"></script>
-    <!-- <script src="js/slider.js"></script> -->
-    <script src="js/car-init.js?"></script>
+        <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase-firestore.js"></script>
+        <script src="js/firebase-controller.js?"></script>
+        <script src="js/functions.js"></script>
+        <!-- <script src="js/slider.js"></script> -->
+        <script src="js/car-init.js?"></script>
 
 </body>
 
