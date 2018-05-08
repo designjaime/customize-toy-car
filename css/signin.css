@@ -116,6 +116,7 @@ ul, li {
 @media only screen and (min-width: 600px) {
   .user-modal-container {
     margin: 3em auto;
+    margin-bottom: 0;
   }
   .user-modal-container .switcher a {
     height: 70px;
