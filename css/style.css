@@ -2,8 +2,11 @@
   margin: 0;
   padding: 0;
 }
+body{
+  font-family: 'PT Sans', sans-serif;
+}
 h1 {
-font-family: 'Do Hyeon', sans-serif;}
+font-family: 'PT Sans', sans-serif;}
 
 body {
   overflow-x: hidden;
@@ -116,7 +119,7 @@ html {
   text-align: center;
 }
 .custom-btn {
-  background-color: #4e64d0;
+  background-color: #0094ea;
   color: #ffffff;
 }
 
@@ -254,11 +257,10 @@ html {
 /*draggable*/
 
 .draggable {
-  width: 100px;
   min-width: 30px;
   min-height: 30px;
-  max-width: 200px;
-  max-height: 200px;
+  max-width: 100px;
+  max-height: 100px;
 }
 
 /* 100% Image Width on Smaller Screens */
@@ -366,9 +368,8 @@ Bootstrap 4 breakpoints
   .logo{
     max-width: 100%;
   }
-    
-  } /*1rem = 16px*/
 }
+
 
 /* Extra large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {  

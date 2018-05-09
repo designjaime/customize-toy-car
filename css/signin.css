@@ -83,7 +83,7 @@ ul, li {
   
   max-width: 600px;
   background: #FFF;
-  border: #4e64d0;
+  border: #0094ea;
   border-width: 1px;
   border-style: solid;
   
@@ -111,7 +111,7 @@ ul, li {
 }
 .user-modal-container .switcher a.selected {
   background: #FFF;
-  color: #4e64d0;
+  color: #0094ea;
 }
 @media only screen and (min-width: 600px) {
   .user-modal-container {
@@ -194,7 +194,7 @@ ul, li {
   outline: none;
 }
 .form input.has-error {
-  border: 1px solid #4e64d0;
+  border: 1px solid #0094ea;
 }
 .form input[type=password] {
   /* space left for the HIDE button */
@@ -203,7 +203,7 @@ ul, li {
 .form input[type=submit] {
   padding: 16px 0;
   cursor: pointer;
-  background: #4e64d0;
+  background: #0094ea;
   color: #FFF;
   font-weight: bold;
   border: none;
@@ -218,10 +218,10 @@ ul, li {
   	-o-transition: all 0.30s ease-in-out;
 }
 .form input[type=submit]:hover {
-	background: #4e64d0;
+	background: #0094ea;
 }
 .no-touch .form input[type=submit]:hover, .no-touch .form input[type=submit]:focus {
-  background: #4e64d0;
+  background: #0094ea;
   outline: none;
 }
 .form .hide-password {
