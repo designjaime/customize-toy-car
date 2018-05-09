@@ -34,6 +34,7 @@ loadData(collection, function (snapshot) {
 $("#car-img-overlay").val("#" + color);
 
 $("#edit-button").attr("href", "customize.html?collection=" + collection + "&docid=" + docId);
+$("#race-button").attr("href", "race.html?color=" + color);
 
 $(".product-quantity input").on('click', function () {
     $(".car-price").text($(".car-price").val() * $(".number").val());
