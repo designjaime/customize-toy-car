@@ -14,5 +14,8 @@ $(function () {
     }
     return false;
   });
-});
 
+  $("#cart-button").click(function () {
+    $("#cart-button").attr("href", "cart.html?collection=" + collection + "&docid=" + docId + "&color=" + $("#car-img-overlay").val().substr(1));
+  });
+});

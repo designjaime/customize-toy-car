@@ -4,16 +4,18 @@ var urlParams = new URLSearchParams(window.location.search);
 
 var collection = urlParams.get('collection');
 var docId = urlParams.get('docid');
+var color = urlParams.get('color');
 var shipping = 6.00;
 
 
 console.log(collection);
 console.log(docId);
+console.log(color);
 
 loadData(collection, function (snapshot) {
     snapshot.docs.forEach(function (doc) {
         if (doc.id === docId) {
-            console.log('Fousdfsdnd it !!! ' + doc.data().img);
+            console.log('Found it !!! ' + doc.data().img);
             console.log(doc.data().name);
             console.log(doc.data().price);
             console.log(doc.data().description);
@@ -28,7 +30,9 @@ loadData(collection, function (snapshot) {
         }
     });
 });
-$("#cart-button").attr("href", "cart.html?collection=" + collection + "&docid=" + docId);
+
+$("#car-img-overlay").val("#" + color);
+
 $("#edit-button").attr("href", "customize.html?collection=" + collection + "&docid=" + docId);
 
 $(".product-quantity input").on('click', function () {

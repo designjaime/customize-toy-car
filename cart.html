@@ -11,6 +11,8 @@
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style-1.css">
+    <link rel="stylesheet" href="css/cart.css">
 
 </head>
 
@@ -37,10 +39,11 @@
         <div id="page-content-wrapper">
             <div class="container-fluid">
                 <a href="#menu-toggle" id="menu-toggle">
-                    <img src="img/logo.jpg" id="logonav"> </a>
+                    <img src="img/logo.png" id="logonav"> </a>
                 <div class="row product">
-                    <div class="col-lg-6 col-md-6" style="text-align:right;">
-                        <img src="" class="carpic" style="width:40%;" id="car-img"> </div>
+                    <div class="col-lg-6 col-md-6 pr-0 pl-0" style="text-align:right;">
+                        <input type="color" value="#0000ff" id="car-img-overlay">
+                        <img src="" class="img-fluid" id="car-img"> </div>
                     <div class="col-lg-6 col-md-6">
                         <h5 id="car-name"></h5>
                         <p class="mt-3">$
@@ -50,7 +53,7 @@
                             <div class="product-quantity" id='myform'>
                                 <input type="number" value="1" min="1"> </div>
                             <a href="cart.html" id="edit-button">
-                                <button class="btn btn-sm btn-warning ">Edit</button>
+                                <button class="btn btn-sm btn-warning">Edit</button>
                             </a>
                             <button id="remove" class="btn btn-sm btn-danger">Remove</button>
                         </div>
@@ -73,13 +76,13 @@
                         </div>
                     </div>
                     <div class="container mt-3" style="text-align:right;">
-                        <a href=" race.html ">
+                        <a href="race.html">
                             <button class="btn btn-dark mr-3">
                                 <i class="fa fa-automobile"></i>
                                 </span> Go to race</button>
                         </a>
-                        <a href="payment.html ">
-                            <button id="mk_payment " class="btn btn-success ">
+                        <a href="payment.html">
+                            <button id="mk_payment" class="btn btn-success">
                                 <i class="fa fa-credit-card"></i>
                                 </span>Checkout</button>
                         </a>
@@ -89,28 +92,28 @@
         </div>
     </div>
     </div>
-    <script src="https://www.gstatic.com/firebasejs/4.12.0/firebase.js "></script>
+    <script src="https://www.gstatic.com/firebasejs/4.12.0/firebase.js"></script>
     <script>
         // Initialize Firebase
         var config = {
-            apiKey: "AIzaSyAU_68u90E0O_sFdLhCzHLJxeSnKmskUeU ",
-            authDomain: "springbreak-df1b8.firebaseapp.com ",
-            databaseURL: "https://springbreak-df1b8.firebaseio.com ",
-            projectId: "springbreak-df1b8 ",
-            storageBucket: "springbreak-df1b8.appspot.com ",
-            messagingSenderId: "442983166470 "
+            apiKey: "AIzaSyAU_68u90E0O_sFdLhCzHLJxeSnKmskUeU",
+            authDomain: "springbreak-df1b8.firebaseapp.com",
+            databaseURL: "https://springbreak-df1b8.firebaseio.com",
+            projectId: "springbreak-df1b8",
+            storageBucket: "springbreak-df1b8.appspot.com",
+            messagingSenderId: "442983166470"
         };
         firebase.initializeApp(config);
     </script>
-    <script src="https://code.jquery.com/jquery-1.12.4.js "></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js "></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js "></script>
-    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js "></script>
-    <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js "></script>
-    <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase-firestore.js "></script>
-    <script src="js/firebase-controller.js? "></script>
-    <script src="js/functions.js "></script>
-    <script src="js/cart.js? "></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase-firestore.js"></script>
+    <script src="js/firebase-controller.js?"></script>
+    <script src="js/functions.js"></script>
+    <script src="js/cart.js?ver=1.0.1"></script>
 
 </body>
 
