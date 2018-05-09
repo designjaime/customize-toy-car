@@ -10,6 +10,16 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <link rel="stylesheet" href="css/style.css">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-118957003-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-118957003-1');
+    </script>
+
 </head>
 
 <body>
@@ -29,13 +39,14 @@
                     <a href="#">Profile</a>
                 </li>
                 <li id="bottombtn">
-                    <input type="submit" id="signout" class="signoutbtn btn-primary btn-xs" value="Sign Out" onclick="handleSignout();">
-                </li>
+                    <input type="submit" id="signout" class="signoutbtn btn-primary btn-xs" value="Sign Out" onclick="handleSignout();"> </li>
             </ul>
         </div>
         <div id="page-content-wrapper">
             <div class="container-fluid">
-                <a href="#menu-toggle" id="menu-toggle"><img src="img/logo.jpg" id="logonav"></a>
+                <a href="#menu-toggle" id="menu-toggle">
+                    <img src="img/logo.jpg" id="logonav">
+                </a>
                 <div id="nav_u" class="text-center">
                     <a href="home.html">
                         <button id="home" class="btn btn-secondary">Home</button>
@@ -62,26 +73,21 @@
                                 <div class="form-group">
                                     <label for="description" class="col-sm-3 control-label">Description</label>
                                     <div class="col-sm-9">
-                                        <input type="text" class="form-control" id="description" name="description">
-                                    </div>
+                                        <input type="text" class="form-control" id="description" name="description"> </div>
                                 </div>
                                 <div class="form-group">
                                     <label for="amount" class="col-sm-3 control-label">Amount</label>
                                     <div class="col-sm-9">
-                                        <input type="number" class="form-control" id="amount" name="amount">
-                                    </div>
+                                        <input type="number" class="form-control" id="amount" name="amount"> </div>
                                 </div>
                                 <div class="form-group">
                                     <label for="date" class="col-sm-3 control-label">Date</label>
                                     <div class="col-sm-9">
-                                        <input type="date" class="form-control" id="date" name="date">
-                                    </div>
+                                        <input type="date" class="form-control" id="date" name="date"> </div>
                                 </div>
                                 <div class="form-group">
                                     <div class="col-sm-12">
-                                        <button type="button" class="btn btn-default preview-add-button">
-                                            Add
-                                        </button>
+                                        <button type="button" class="btn btn-default preview-add-button"> Add </button>
                                     </div>
                                 </div>
                             </div>
@@ -110,7 +116,11 @@
                         </div>
                         <div class="row text-right">
                             <div class="col-xs-12">
-                                <h4>Total: <strong><span class="preview-total"></span></strong></h4>
+                                <h4>Total:
+                                    <strong>
+                                        <span class="preview-total"></span>
+                                    </strong>
+                                </h4>
                             </div>
                         </div>
                         <div class="row">
@@ -129,6 +139,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script src="js/functions.js"></script>
+
 </body>
 
 </html>
