@@ -115,8 +115,10 @@ html {
 .col {
   text-align: center;
 }
-
-
+.custom-btn {
+  background-color: #4e64d0;
+  color: #ffffff;
+}
 
 #myImg {
   border-radius: 5px;
