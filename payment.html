@@ -10,135 +10,53 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <link rel="stylesheet" href="css/style.css">
-<<<<<<< HEAD
-=======
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-118957003-1"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
-
-        gtag('config', 'UA-118957003-1');
-    </script>
->>>>>>> 10c2c8368cd08fa17bccd3df8a87dbe4cd1c0ee6
+    <script type="text/javascript" src="https://js.stripe.com/v1/"></script>
+    <script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI="
+        crossorigin="anonymous"></script>
 
 </head>
 
 <body>
-    <div id="wrapper">
-        <div id="sidebar-wrapper">
-            <ul class="sidebar-nav">
-                <li class="sidebar-brand">
-                    <a>Customize Toy Car</a>
-                </li>
-                <li>
-                    <a href="#">Home</a>
-                </li>
-                <li>
-                    <a href="#">Garage</a>
-                </li>
-                <li>
-                    <a href="#">Profile</a>
-                </li>
-                <li id="bottombtn">
-                    <input type="submit" id="signout" class="signoutbtn btn-primary btn-xs" value="Sign Out" onclick="handleSignout();"> </li>
-            </ul>
+    <div class="container">
+        <div class="logo">
+            <a href="home.html">
+                <img src="img/logo.jpg" style="width: 200px;"> </a>
         </div>
-        <div id="page-content-wrapper">
-            <div class="container-fluid">
-                <a href="#menu-toggle" id="menu-toggle">
-<<<<<<< HEAD
-                    <img src="img/logo.jpg" id="logonav"> </a>
-=======
-                    <img src="img/logo.jpg" id="logonav">
-                </a>
->>>>>>> 10c2c8368cd08fa17bccd3df8a87dbe4cd1c0ee6
-                <div id="nav_u" class="text-center">
-                    <a href="home.html">
-                        <button id="home" class="btn btn-secondary">Home</button>
-                    </a>
-                    <a href="cart.html">
-                        <button id="cart" class="btn btn-primary">Cart</button>
-                    </a>
-                    <a href="payment.html">
-                        <button id="payment" class="btn btn-info">Payment</button>
-                    </a>
-                </div>
-            </div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-sm-12">
-                        <legend>Name:</legend>
-                    </div>
-                    <!-- panel preview -->
-                    <div class="col-sm-5">
-                        <h4>Add payment:</h4>
-                        <hr>
-                        <div class="panel panel-default">
-                            <div class="panel-body form-horizontal payment-form">
-                                <div class="form-group">
-                                    <label for="description" class="col-sm-3 control-label">Description</label>
-                                    <div class="col-sm-9">
-                                        <input type="text" class="form-control" id="description" name="description"> </div>
-                                </div>
-                                <div class="form-group">
-                                    <label for="amount" class="col-sm-3 control-label">Amount</label>
-                                    <div class="col-sm-9">
-                                        <input type="number" class="form-control" id="amount" name="amount"> </div>
-                                </div>
-                                <div class="form-group">
-                                    <label for="date" class="col-sm-3 control-label">Date</label>
-                                    <div class="col-sm-9">
-                                        <input type="date" class="form-control" id="date" name="date"> </div>
-                                </div>
-                                <div class="form-group">
-                                    <div class="col-sm-12">
-                                        <button type="button" class="btn btn-default preview-add-button"> Add </button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- / panel preview -->
-                    <div class="col-sm-7">
-                        <h4>Preview:</h4>
-                        <hr>
-                        <div class="row">
-                            <div class="col-xs-12">
-                                <div class="table-responsive">
-                                    <table class="table preview-table">
-                                        <thead>
-                                            <tr>
-                                                <th>Description</th>
-                                                <th>Amount</th>
-                                                <th>Date</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody></tbody>
-                                        <!-- preview content goes here-->
-                                    </table>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row text-right">
-                            <div class="col-xs-12">
-                                <h4>Total:
-                                    <strong>
-                                        <span class="preview-total"></span>
-                                    </strong>
-                                </h4>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-xs-12">
-                                <hr style="border:1px dashed #dddddd;">
-                                <button type="button" class="btn btn-primary btn-block">Submit all and finish</button>
-                            </div>
-                        </div>
+        <div class="center_div">
+            <form action="" method="POST" id="payment-form">
+                <span class="payment-errors"></span>
+                <div class="form-group">
+                    <label>Card Name</label>
+                    <input type="text" class="form-control" placeholder="Enter Name of the card" size="20"
+                        data-stripe="name"> </div>
+                <div class="form-group">
+                    <label>Card Number</label>
+                    <input type="text" class="form-control" placeholder="Enter card number" size="20"
+                        data-stripe="number"> </div>
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label>CVC</label>
+                        <input type="text" class="form-control" size="2" data-stripe="cvc"> </div>
+                    <div class="form-group col-md-6">
+                        <label>Card Type</label>
+                        <select class="form-control" data-stripe="type">
+                            <option>Master</option>
+                            <option>Visa</option>
+                        </select>
                     </div>
                 </div>
-            </div>
+                <div class="form-group">
+                    <label>Expiration Date</label>
+                    <div class="form-row">
+                        <div class="form-group col-md-5 col-sm-5">
+                            <input type="text" class="form-control" size="4" placeholder="MM" data-stripe="exp-month"> </div>
+                        <div class="form-group col-md-5 col-sm-5">
+                            <input type="text" class="form-control" size="4" placeholder="YYYY" data-stripe="exp-year"> </div>
+                    </div>
+                </div>
+                <hr>
+                <button type="submit" class="btn btn-info float-center">Submit Payment</button>
+            </form>
         </div>
     </div>
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
@@ -146,10 +64,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script src="js/functions.js"></script>
-<<<<<<< HEAD
-    <script src="js/auth.js"></script>
-=======
->>>>>>> 10c2c8368cd08fa17bccd3df8a87dbe4cd1c0ee6
+    <script src="js/payment.js"></script>
 
 </body>
 

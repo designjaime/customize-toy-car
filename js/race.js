@@ -1,18 +1,12 @@
 /*Tutorail by* Arshad Muhammed */
 /*Link: https://www.youtube.com/watch?v=oWaGkW1YDmk */
 $(function () {
-    // Get color param.
-    console.log(window.location.search);
-    var urlParams = new URLSearchParams(window.location.search);
-    var color = urlParams.get('color');
-    console.log(color);
 
     var anim_id;
 
     /*Variables*/
     var container = $('#container');
     var car = $('#car');
-    car.css('background-color', '#' + color);
     var car_1 = $('#car_1');
     var car_2 = $('#car_2');
     var car_3 = $('#car_3');
@@ -116,16 +110,16 @@ $(function () {
             stop_the_game();
             return;
         }
-
+        /*Set Score*/
         score_counter++;
+
         if (score_counter % 20 == 0) {
             score.text(parseInt(score.text()) + 1);
         }
-        if (score_counter % 200 == 0) {
+        if (score_counter % 500 == 0) {
             speed++;
             line_speed++;
         }
-
         car_down(car_1);
         car_down(car_2);
         car_down(car_3);
@@ -171,18 +165,6 @@ $(function () {
         restart_btn.focus();
     }
 
-    function gameover() {
-        sc.innerHTML += score;
-        gameOver.style.display = 'block';
-        clearTimer();
-        //历史积分
-        var historyScore = localStorage.getItem('his');
-        if (historyScore == null || historyScore < score) {
-            localStorage.setItem('his', score);
-            historyScore = score;
-        }
-        his.innerHTML = historyScore;
-    }
     /* ------------------------------COLISSION --------------------------------- */
     function collision($div1, $div2) {
         var x1 = $div1.offset().left;
@@ -201,30 +183,39 @@ $(function () {
         if (b1 < y2 || y1 > b2 || r1 < x2 || x1 > r2) return false;
         return true;
     }
-    /*-------------------------------Hammer.JS--------------------------------- */
+
     $(function () {
         var car = document.getElementById("car");
+        var carCSS = $('#car');
         var hammertime = Hammer(car);
         hammertime.get('swipe').set({
             direction: Hammer.DIRECTION_ALL
         });
 
         hammertime.on("swipeleft", function () {
-            $(car).animate({ left: "-=75" }, 50)
+            if (game_over === false && (parseInt($(car).position().left) - 5) > 0) {
+                carCSS.css('left', $(car).position().left - 75)
+            }
         });
 
         hammertime.on("swiperight", function () {
-            $(car).animate({ left: "+=75" }, 50)
+            if (game_over === false && ((parseInt(carCSS.css('left')) + 5) < (container_width - car_width))) {
+                carCSS.css('left', $(car).position().left + 75)
+            }
+
         });
 
         hammertime.on("swipeup", function () {
-            $(car).animate({ top: "-=75" }, 50)
-            car.get('swipeup').set({ direction: car.DIRECTION_ALL });
-
+            if (game_over === false && (parseInt($(car).position().top) - 3) > 0) {
+                carCSS.css('top', $(car).position().top - 75)
+            }
         });
         hammertime.on("swipedown", function () {
-            $(car).animate({ top: "+=75" }, 50)
+            if (game_over === false && ((parseInt(carCSS.css('top')) + 3) < (container_width - car_height))) {
+                carCSS.css('top', $(car).position().top + 75)
+            }
         });
     })
+
 
 });
