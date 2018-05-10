@@ -13,58 +13,94 @@
     <script type="text/javascript" src="https://js.stripe.com/v1/"></script>
     <script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI="
         crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/style-1.css?ver=1.0.1">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-118957003-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-118957003-1');
+    </script>
 
 </head>
 
 <body>
-    <div class="container">
-        <div class="logo">
-            <a href="home.html">
-                <img src="img/logo.jpg" style="width: 200px;"> </a>
+    <div id="wrapper">
+        <div id="sidebar-wrapper">
+            <ul class="sidebar-nav">
+                <li class="sidebar-brand">
+                    <a>Customize Toy Car</a>
+                </li>
+                <li>
+                    <a href="home.html">Home</a>
+                </li>
+                <li>
+                    <a href="cart.html">Garage</a>
+                </li>
+                <li>
+                    <a href="index.html">Profile</a>
+                </li>
+                <li id="bottombtn">
+                    <input type="submit" id="signout" class="signoutbtn btn-primary btn-xs" value="Sign Out" onclick="handleSignout();"> </li>
+            </ul>
         </div>
-        <div class="center_div">
-            <form action="" method="POST" id="payment-form">
-                <span class="payment-errors"></span>
-                <div class="form-group">
-                    <label>Card Name</label>
-                    <input type="text" class="form-control" placeholder="Enter Name of the card" size="20"
-                        data-stripe="name"> </div>
-                <div class="form-group">
-                    <label>Card Number</label>
-                    <input type="text" class="form-control" placeholder="Enter card number" size="20"
-                        data-stripe="number"> </div>
-                <div class="form-row">
-                    <div class="form-group col-md-6">
-                        <label>CVC</label>
-                        <input type="text" class="form-control" size="2" data-stripe="cvc"> </div>
-                    <div class="form-group col-md-6">
-                        <label>Card Type</label>
-                        <select class="form-control" data-stripe="type">
-                            <option>Master</option>
-                            <option>Visa</option>
-                        </select>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label>Expiration Date</label>
+        <div id="page-content-wrapper">
+            <div class="container-fluid">
+                <a href="#menu-toggle" id="menu-toggle">
+                    <img class="logo" src="img/logo.png"> </a>
+            </div>
+        </div>
+        <div class="container mt-5" style="max-width:600px;">
+            <div class="center_div">
+                <form action="" method="POST" id="payment-form">
+                    <span class="payment-errors"></span>
+                    <div class="form-group">
+                        <label>Card Name</label>
+                        <input type="text" class="form-control" placeholder="Enter Name of the card" size="20"
+                            data-stripe="name"> </div>
+                    <div class="form-group">
+                        <label>Card Number</label>
+                        <input type="text" class="form-control" placeholder="Enter card number" size="20"
+                            data-stripe="number"> </div>
                     <div class="form-row">
-                        <div class="form-group col-md-5 col-sm-5">
-                            <input type="text" class="form-control" size="4" placeholder="MM" data-stripe="exp-month"> </div>
-                        <div class="form-group col-md-5 col-sm-5">
-                            <input type="text" class="form-control" size="4" placeholder="YYYY" data-stripe="exp-year"> </div>
+                        <div class="form-group col-md-6">
+                            <label>CVC</label>
+                            <input type="text" class="form-control" size="2" data-stripe="cvc"> </div>
+                        <div class="form-group col-md-6">
+                            <label>Card Type</label>
+                            <select class="form-control" data-stripe="type">
+                                <option>Master</option>
+                                <option>Visa</option>
+                            </select>
+                        </div>
                     </div>
-                </div>
-                <hr>
-                <button type="submit" class="btn btn-info float-center">Submit Payment</button>
-            </form>
+                    <div class="form-group">
+                        <label>Expiration Date</label>
+                        <div class="form-row">
+                            <div class="form-group col-md-5 col-sm-5">
+                                <input type="text" class="form-control" size="4" placeholder="MM" data-stripe="exp-month"> </div>
+                            <div class="form-group col-md-5 col-sm-5">
+                                <input type="text" class="form-control" size="4" placeholder="YYYY" data-stripe="exp-year"> </div>
+                        </div>
+                    </div>
+                    <hr>
+                    <button type="submit" class="btn btn-info float-center">Submit Payment</button>
+                </form>
+            </div>
         </div>
     </div>
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase-firestore.js"></script>
+    <script src="js/firebase-controller.js"></script>
     <script src="js/functions.js"></script>
     <script src="js/payment.js"></script>
+    <script src="js/auth.js"></script>
 
 </body>
 
