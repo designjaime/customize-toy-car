@@ -8,10 +8,23 @@
     <meta name="author" content="">
     <title>customize toycar</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.12/css/all.css" integrity="sha384-G0fIWCsCzJIMAVNQPfjH08cyYaUtMwjJwqiRKxxE/rx96Uroj1BtIQ6MLJuheaO9"
+        crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/slider.css">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-118957003-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-118957003-1');
+    </script>
 
 </head>
 
@@ -37,33 +50,42 @@
         </div>
         <div id="page-content-wrapper">
             <div class="container-fluid">
-                <a href="#menu-toggle" id="menu-toggle">
-                    <img src="img/logo.jpg" id="logonav"> </a>
-                <div class="container">
-                    <div class="row align-items-center" id="item-container">
-                        <div class="col-sm-1">
-                            <img class="mb-2" src="http://via.placeholder.com/70x70">
-                            <img class="mb-2" src="http://via.placeholder.com/70x70">
-                            <img src="http://via.placeholder.com/70x70"> </div>
-                        <div class="col-sm-6 text-center">
-                            <img src="" class="carpic modalable preview" id="car-img">
+                <div class="row">
+                    <div class="col-8">
+                        <a href="#menu-toggle" id="menu-toggle">
+                            <img class="logo" src="img/logo.png"> </a>
+                    </div>
+                    <div class="col-4">
+                        <a href="cart.html" id="cart-button">
+                            <div class="btn custom-btn float-right">
+                                <i class="fas fa-shopping-cart mr-1"></i>Add to garage </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="car-init-body container">
+                    <div class="row">
+                        <div class="col-lg-6 text-center  align-middle ">
+                            <img src="" class="img-responsive carpic modalable preview" id="car-img" style="max-width:90%;">
                             <div id="modal-img-popup" class="modal">
                                 <span class="close">&times;</span>
                                 <img class="modal-content preview">
                                 <div class="modal-caption"></div>
                             </div>
                         </div>
-                        <div class="col-sm-5">
-                            <h2 class="mb-3" id="car-name"></h2>
+                        <div class="col-lg-6 text-center">
+                            <h2 class="mt-2 mb-2 text-center" id="car-name"></h2>
                             <span class="fa fa-star checked"></span>
                             <span class="fa fa-star checked"></span>
                             <span class="fa fa-star checked"></span>
                             <span class="fa fa-star"></span>
                             <span class="fa fa-star"></span>
-                            <h3 class="mt-3" id="car-price"></h3>
+                            <h3 class="mt-2">$
+                                <span id="car-price"></span>
+                            </h3>
                             <br>
                             <p id="car-description"></p>
                             <div class="row">
+<<<<<<< HEAD
                                 <div class="col-6">
                                     <a href="cart.html" id="cart-button">
                                         <div class="btn btn-info btn-lg">Add to garage </div>
@@ -72,8 +94,20 @@
                             </div>
                             <div class="row">
                                 <div class="col-12 pt-4">
+=======
+                                <div class="col text-center">
+                                    <select class="custom-select">
+                                        <option selected>1 </option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                    </select>
+                                </div>
+                                <div class="col">
+>>>>>>> 10c2c8368cd08fa17bccd3df8a87dbe4cd1c0ee6
                                     <a href="customize.html" id="customize-button">
-                                        <div class="btn btn-warning btn-lg btn-block">Customize your car </div>
+                                        <div class="custom-btn btn float-left">
+                                            <i class="fas fa-wrench"></i> Customize your car </div>
                                     </a>
                                 </div>
                             </div>
@@ -81,6 +115,7 @@
                     </div>
                 </div>
             </div>
+<<<<<<< HEAD
         </div>
     </div>
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
@@ -94,6 +129,18 @@
     <!-- <script src="js/slider.js"></script> -->
     <script src="js/car-init.js?"></script>
     <script src="js/auth.js"></script>
+=======
+            <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+            <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+            <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
+            <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase-firestore.js"></script>
+            <script src="js/firebase-controller.js?"></script>
+            <script src="js/functions.js"></script>
+            <!-- <script src="js/slider.js"></script> -->
+            <script src="js/car-init.js?"></script>
+>>>>>>> 10c2c8368cd08fa17bccd3df8a87dbe4cd1c0ee6
 
 </body>
 

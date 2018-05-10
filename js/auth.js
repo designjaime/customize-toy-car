@@ -18,6 +18,7 @@ function handleSignup() {
         .then(
             function () {
                 alert("user created");
+                window.location.href = "home.html";
             }
         )
 

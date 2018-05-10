@@ -24,6 +24,8 @@ loadData("cars", function (snapshot) {
         var isRightSide = (i + 1) % 2 === 0;
         var isLeftSide = !isRightSide;
         var isLastItem = i === snapshot.docs.length - 1;
+        console.log("load cars[%s], isRightSide[%s], isLeftSide[%s], isLastItem[%s] ... %s-%s",
+            i, isRightSide, isLeftSide, isLastItem, doc.id, doc.data().img);
 
         if (isLeftSide) {
             str += leftItemDiv("cars", doc.id, doc.data().img);
@@ -45,6 +47,7 @@ loadData("cars", function (snapshot) {
 loadData("trucks", function (snapshot) {
     snapshot.docs.forEach(function (doc) {
         $('#truck-car-items').append(singleItemDiv("trucks", doc.id, doc.data().img));
+        console.log("load trucks ... %s-%s", doc.id, doc.data().img);
     });
 });
 
@@ -52,6 +55,7 @@ loadData("trucks", function (snapshot) {
 loadData("jeeps", function (snapshot) {
     snapshot.docs.forEach(function (doc) {
         $('#suv-car-items').append(singleItemDiv("jeeps", doc.id, doc.data().img));
+        console.log("load jeeps ... %s-%s", doc.id, doc.data().img);
     });
 });
 

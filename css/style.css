@@ -2,6 +2,11 @@
   margin: 0;
   padding: 0;
 }
+body{
+  font-family: 'PT Sans', sans-serif;
+}
+h1 {
+font-family: 'PT Sans', sans-serif;}
 
 body {
   overflow-x: hidden;
@@ -10,59 +15,13 @@ body {
 html {
   text-align: center;
 }
-
-.logo {
-  margin-top: 100px;
-  margin-bottom: 100px;
-  text-align: center;
+.logo{
+  max-width: 120px;
 }
 
-/* .input_control {
-  width: 360px;
-  margin: 20px auto;
+.car-init-body{
+  margin-top:100px;
 }
-
-input[type="text"],
-input[type="email"],
-input[type="password"],
-#btn,
-#signup,
-#signin,
-#signout,
-#fblogin,
-#googlelogin,
-#twitterlogin {
-  box-sizing: border-box;
-  text-align: center;
-  font-size: 1.4em;
-  height: 2.7em;
-  border-radius: 4px;
-  border: 1px solid #c8cccf;
-  color: #6a6f77;
-  -web-kit-appearance: none;
-  -moz-appearance: none;
-  display: block;
-  outline: 0;
-  padding: 0 1em;
-  text-decoration: none;
-  width: 100%;
-}
-
-input[type="text"]:focus {
-  border: 1px solid #ff7496;
-}
-
-#btn,
-#signup,
-#signin,
-#signout,
-#fblogin,
-#googlelogin,
-#twitterlogin {
-  color: white;
-  background: #6a6f77;
-} */
-
 #wrapper {
   padding-left: 0;
   -webkit-transition: all 0.5s ease;
@@ -75,9 +34,6 @@ input[type="text"]:focus {
   padding-left: 250px;
 }
 
-#logonav {
-  max-width: 200px;
-}
 
 #sidebar-wrapper {
   z-index: 1000;
@@ -162,16 +118,10 @@ input[type="text"]:focus {
 .col {
   text-align: center;
 }
-
-/* #item-container {
-  margin-top:60px; 
-} */
-
-/* .item-options{
-  margin-top:50px; 
-} */
-
-/*thumbnail img*/
+.custom-btn {
+  background-color: #0094ea;
+  color: #ffffff;
+}
 
 #myImg {
   border-radius: 5px;
@@ -307,11 +257,10 @@ input[type="text"]:focus {
 /*draggable*/
 
 .draggable {
-  width: 100px;
   min-width: 30px;
   min-height: 30px;
-  max-width: 200px;
-  max-height: 200px;
+  max-width: 100px;
+  max-height: 100px;
 }
 
 /* 100% Image Width on Smaller Screens */
@@ -382,3 +331,50 @@ hr {
   color: #333;
   background-color: #333; 
 }
+
+/* 
+Extra small devices (portrait phones, less than 544px) 
+No media query since this is the default in Bootstrap because it is "mobile first"
+*/
+h1 {font-size:1.8rem;} /*1rem = 16px*/
+h2 {font-size:1.2rem;} /*1rem = 16px*/
+/*
+####################################################
+M E D I A  Q U E R I E S
+####################################################
+*/
+
+/*
+::::::::::::::::::::::::::::::::::::::::::::::::::::
+Bootstrap 4 breakpoints
+*/
+/* Small devices (landscape phones, 544px and up) */
+@media (min-width: 544px) {  
+  h1 {font-size:2.0rem;}
+
+  
+   /*1rem = 16px*/
+}
+
+/* Medium devices (tablets, 768px and up) The navbar toggle appears at this breakpoint */
+@media (min-width: 768px) {  
+  h1 {font-size:2.2rem;}
+  /*1rem = 16px*/
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) { 
+  h1 {font-size:2.5rem;}
+  .logo{
+    max-width: 100%;
+  }
+}
+
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {  
+  h1 {font-size:3rem;} /*1rem = 16px*/    
+  h2 {font-size:1.5rem;} /*1rem = 16px*/
+}
+
+

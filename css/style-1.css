@@ -3,10 +3,11 @@ html {
   -webkit-font-smoothing: antialiased;
   padding: 20px 0;
 }
-
-.title {
-  font-size: 2.5em;
+body{
+  font-family: 'PT Sans', sans-serif;
 }
+h1 {
+  font-family: 'PT Sans', sans-serif;}
 
 .band {
   width: 90%;
@@ -25,9 +26,9 @@ html {
   .item-1-container {
     grid-column: 1/ span 2;
   }
-  .item-1 h1 {
+  /* .item-1 h1 {
     font-size: 30px;
-  }
+  } */
 }
 
 @media only screen and (min-width: 850px) {
@@ -79,9 +80,8 @@ html {
 /* typography */
 
 h1 {
-  font-size: 20px;
   margin: 0;
-  color: #333;
+  color: #0094ea;
 }
 
 .card span {
@@ -98,7 +98,7 @@ h1 {
 }
 
 .band {
-  margin-top: 60px;
+  margin-top: 30px;
 }
 
 #car-img-overlay {
