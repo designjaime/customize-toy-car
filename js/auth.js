@@ -45,7 +45,7 @@ function handleSignin() {
 
         .catch(
             function (error) {
-                alert("wrong username or password");
+                alert("wrong username or password - " + error.message);
             }
         )
 }
