@@ -38,6 +38,8 @@ $("#car-img-overlay").val("#" + color);
 $("#edit-button").attr("href", "customize.html?collection=" + collection + "&docid=" + docId);
 $("#race-button").attr("href", "race.html?color=" + color);
 
+
+
 $(".product-quantity input").on('click', function () {
     refreshPrice($(this).val());
 });

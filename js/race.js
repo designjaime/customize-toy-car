@@ -216,6 +216,7 @@ $(function () {
             }
         });
     })
+    $("#race-back-button").attr("href", "cart.html?collection=" + collection + "&docid=" + docId);
 
 
 });
