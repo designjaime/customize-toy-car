@@ -1,12 +1,18 @@
 /*Tutorail by* Arshad Muhammed */
 /*Link: https://www.youtube.com/watch?v=oWaGkW1YDmk */
 $(function () {
+    // Get color param.
+    console.log(window.location.search);
+    var urlParams = new URLSearchParams(window.location.search);
+    var color = urlParams.get('color');
+    console.log(color);
 
     var anim_id;
 
     /*Variables*/
     var container = $('#container');
     var car = $('#car');
+    car.css('background-color', '#' + color);
     var car_1 = $('#car_1');
     var car_2 = $('#car_2');
     var car_3 = $('#car_3');
