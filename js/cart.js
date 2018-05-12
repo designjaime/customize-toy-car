@@ -36,7 +36,9 @@ loadData(collection, function (snapshot) {
 $("#car-img-overlay").val("#" + color);
 
 $("#edit-button").attr("href", "customize.html?collection=" + collection + "&docid=" + docId);
-$("#race-button").attr("href", "race.html?color=" + color);
+$("#race-button").click(function () {
+    $("#race-button").attr("href", "race.html?color=" + $("#car-img-overlay").val().substr(1));
+});
 
 $(".product-quantity input").on('click', function () {
     refreshPrice($(this).val());

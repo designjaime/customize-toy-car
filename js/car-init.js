@@ -1,3 +1,4 @@
+// window.location.search includes ...?collection=value1&docid=value2
 console.log(window.location.search);
 
 var urlParams = new URLSearchParams(window.location.search);
