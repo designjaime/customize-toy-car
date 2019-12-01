@@ -1,17 +1,27 @@
-body{
-  font-family: 'PT Sans', sans-serif;
+body {
+  font-family: 'Open Sans', sans-serif;
 }
-#car-img-overlay, #car-img {
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: 'Dosis', sans-serif;
+}
+
+#car-img-overlay,
+#car-img {
   width: 80%;
 }
-h4 {
-  font-family: 'PT Sans', sans-serif;
-  color:#0094ea;
-}
-.nav-pills .nav-link.active, .nav-pills .show>.nav-link{
-  background-color: #0094ea;
-  color: #ffffff;}
 
-.logo{
+
+
+.nav-pills .nav-link.active,
+.nav-pills .show>.nav-link {
+  background-color: #2CD2FF;
+  color: #ffffff;
+}
+
+.logo {
   max-width: 120px;
 }

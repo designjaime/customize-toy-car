@@ -1,4 +1,14 @@
-#car-img-overlay, #car-img {
+#car-img-overlay,
+#car-img {
     width: 50%;
 }
-  
+
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+h1,
+h2,
+h3 {
+    font-family: 'Dosis', sans-serif;
+}

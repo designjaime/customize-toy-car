@@ -11,14 +11,17 @@
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <link rel="stylesheet" href="css/style.css">
     <script type="text/javascript" src="https://js.stripe.com/v1/"></script>
-    <script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI="
-        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-2.2.4.js"
+        integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/style-1.css?ver=1.0.1">
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-118957003-1"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
         gtag('js', new Date());
 
         gtag('config', 'UA-118957003-1');
@@ -31,25 +34,29 @@
         <div id="sidebar-wrapper">
             <ul class="sidebar-nav">
                 <li class="sidebar-brand">
-                    <a>Customize Toy Car</a>
+                    <a>Carstomize</a>
                 </li>
                 <li>
                     <a href="home.html">Home</a>
                 </li>
                 <li>
-                    <a href="cart.html">Garage</a>
+                    <a href="cart.html">My Garage</a>
                 </li>
                 <li>
-                    <a href="index.html">Profile</a>
+                    <a href="index.html">My account</a>
+                </li>
+                <li>
+                    <a href="index.html">Settings</a>
                 </li>
                 <li id="bottombtn">
-                    <input type="submit" id="signout" class="signoutbtn btn-primary btn-xs" value="Sign Out" onclick="handleSignout();"> </li>
+                    <input type="submit" id="signout" class="signoutbtn btn-primary btn-sm" value="Sign Out"
+                        onclick="handleSignout();"> </li>
             </ul>
         </div>
         <div id="page-content-wrapper">
-            <div class="container-fluid">
+            <div class="container">
                 <a href="#menu-toggle" id="menu-toggle">
-                    <img class="logo" src="img/logo.png"> </a>
+                    <img class="logo" src="img/Carstomize-logo.png" style="width:140px;"> </a>
             </div>
             <div class="container mt-5" style="max-width:600px;">
                 <div class="center_div">
@@ -57,8 +64,8 @@
                         <span class="payment-errors"></span>
                         <div class="form-group">
                             <label>Card Name</label>
-                            <input type="text" class="form-control" placeholder="Enter Name of the card"
-                                size="20" data-stripe="name"> </div>
+                            <input type="text" class="form-control" placeholder="Enter Name of the card" size="20"
+                                data-stripe="name"> </div>
                         <div class="form-group">
                             <label>Card Number</label>
                             <input type="text" class="form-control" placeholder="Enter card number" size="20"
@@ -79,13 +86,15 @@
                             <label>Expiration Date</label>
                             <div class="form-row">
                                 <div class="form-group col-md-5 col-sm-5">
-                                    <input type="text" class="form-control" size="4" placeholder="MM" data-stripe="exp-month"> </div>
+                                    <input type="text" class="form-control" size="4" placeholder="MM"
+                                        data-stripe="exp-month"> </div>
                                 <div class="form-group col-md-5 col-sm-5">
-                                    <input type="text" class="form-control" size="4" placeholder="YYYY" data-stripe="exp-year"> </div>
+                                    <input type="text" class="form-control" size="4" placeholder="YYYY"
+                                        data-stripe="exp-year"> </div>
                             </div>
                         </div>
                         <hr>
-                        <button type="submit" class="btn btn-info float-center">Submit Payment</button>
+                        <button type="submit" class="btn custom-btn float-center">Submit Payment</button>
                     </form>
                 </div>
             </div>

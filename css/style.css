@@ -138,7 +138,12 @@ html {
 }
 
 .custom-btn {
-  background-color: #0094ea;
+  background-color: #2CD2FF;
+  color: #ffffff;
+}
+
+.custom-btn:hover {
+  background-color: rgb(118, 209, 186);
   color: #ffffff;
 }
 

@@ -9,8 +9,8 @@
     <title>customize toycar</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.12/css/all.css" integrity="sha384-G0fIWCsCzJIMAVNQPfjH08cyYaUtMwjJwqiRKxxE/rx96Uroj1BtIQ6MLJuheaO9"
-        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.12/css/all.css"
+        integrity="sha384-G0fIWCsCzJIMAVNQPfjH08cyYaUtMwjJwqiRKxxE/rx96Uroj1BtIQ6MLJuheaO9" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -20,7 +20,10 @@
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-118957003-1"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
         gtag('js', new Date());
 
         gtag('config', 'UA-118957003-1');
@@ -33,39 +36,44 @@
         <div id="sidebar-wrapper">
             <ul class="sidebar-nav">
                 <li class="sidebar-brand">
-                    <a>Customize Toy Car</a>
+                    <a>Carstomize</a>
                 </li>
                 <li>
                     <a href="home.html">Home</a>
                 </li>
                 <li>
-                    <a href="cart.html">Garage</a>
+                    <a href="cart.html">My Garage</a>
                 </li>
                 <li>
-                    <a href="index.html">Profile</a>
+                    <a href="index.html">My account</a>
+                </li>
+                <li>
+                    <a href="index.html">Settings</a>
                 </li>
                 <li id="bottombtn">
-                    <input type="submit" id="signout" class="signoutbtn btn-primary btn-xs" value="Sign Out" onclick="handleSignout();"> </li>
+                    <input type="submit" id="signout" class="signoutbtn btn-primary btn-sm" value="Sign Out"
+                        onclick="handleSignout();"> </li>
             </ul>
         </div>
         <div id="page-content-wrapper">
-            <div class="container-fluid">
+            <div class="container">
                 <div class="row">
                     <div class="col-8">
                         <a href="#menu-toggle" id="menu-toggle">
-                            <img class="logo" src="img/logo.png"> </a>
+                            <img class="logo mb-5" src="img/Carstomize-logo.png" style="width:140px;"> </a>
                     </div>
                     <div class="col-4">
                         <a href="cart.html" id="cart-button">
                             <div class="btn custom-btn float-right">
-                                <i class="fas fa-shopping-cart mr-1"></i>Add to garage </div>
+                                <i class="fas fa-shopping-cart mr-1"></i>ADD TO GARAGE</div>
                         </a>
                     </div>
                 </div>
                 <div class="car-init-body container">
                     <div class="row">
                         <div class="col-lg-6 text-center  align-middle ">
-                            <img src="" class="img-responsive carpic modalable preview" id="car-img" style="max-width:90%;">
+                            <img src="" class="img-responsive carpic modalable preview" id="car-img"
+                                style="max-width:90%;">
                             <div id="modal-img-popup" class="modal">
                                 <span class="close">&times;</span>
                                 <img class="modal-content preview">

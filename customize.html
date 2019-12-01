@@ -9,8 +9,8 @@
   <title>customize toycar</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.12/css/all.css" integrity="sha384-G0fIWCsCzJIMAVNQPfjH08cyYaUtMwjJwqiRKxxE/rx96Uroj1BtIQ6MLJuheaO9"
-    crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.12/css/all.css"
+    integrity="sha384-G0fIWCsCzJIMAVNQPfjH08cyYaUtMwjJwqiRKxxE/rx96Uroj1BtIQ6MLJuheaO9" crossorigin="anonymous">
   <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
   <link rel="stylesheet" href="css/slider.css">
   <link rel="stylesheet" href="css/style.css">
@@ -20,7 +20,10 @@
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-118957003-1"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
     gtag('js', new Date());
 
     gtag('config', 'UA-118957003-1');
@@ -33,27 +36,31 @@
     <div id="sidebar-wrapper">
       <ul class="sidebar-nav">
         <li class="sidebar-brand">
-          <a>Customize Toy Car</a>
+          <a>Carstomize</a>
         </li>
         <li>
           <a href="home.html">Home</a>
         </li>
         <li>
-          <a href="cart.html">Garage</a>
+          <a href="cart.html">My Garage</a>
         </li>
         <li>
-          <a href="index.html">Profile</a>
+          <a href="index.html">My account</a>
+        </li>
+        <li>
+          <a href="index.html">Settings</a>
         </li>
         <li id="bottombtn">
-          <input type="submit" id="signout" class="signoutbtn btn-primary btn-xs" value="Sign Out" onclick="handleSignout();"> </li>
+          <input type="submit" id="signout" class="signoutbtn btn-primary btn-sm" value="Sign Out"
+            onclick="handleSignout();"> </li>
       </ul>
     </div>
     <div id="page-content-wrapper">
-      <div class="container-fluid">
+      <div class="container">
         <div class="row">
           <div class="col-8">
             <a href="#menu-toggle" id="menu-toggle">
-              <img class="logo" src="img/logo.png"> </a>
+              <img class="logo" src="img/Carstomize-logo.png" style="width:140px;"> </a>
           </div>
           <div class="col-4">
             <a href="cart.html" id="cart-button">
@@ -84,34 +91,39 @@
             <div class="container item-options">
               <ul class="nav nav-pills mb-5 row" id="pills-tab" role="tablist">
                 <li class="col-4 nav-item text-center">
-                  <a class="nav-link active" id="pills-Color-tab" data-toggle="pill" href="#pills-Color" role="tab" aria-controls="pills-Color"
-                    aria-selected="true">Paint</a>
+                  <a class="nav-link active" id="pills-Color-tab" data-toggle="pill" href="#pills-Color" role="tab"
+                    aria-controls="pills-Color" aria-selected="true">Paint</a>
                 </li>
                 <li class="col-4 nav-item text-center">
-                  <a class="nav-link" id="pills-Stickers-tab" data-toggle="pill" href="#pills-Stickers" role="tab" aria-controls="pills-Stickers"
-                    aria-selected="false">Stickers</a>
+                  <a class="nav-link" id="pills-Stickers-tab" data-toggle="pill" href="#pills-Stickers" role="tab"
+                    aria-controls="pills-Stickers" aria-selected="false">Stickers</a>
                 </li>
                 <li class="col-4 nav-item text-center">
-                  <a class="nav-link" id="pills-Sound-tab" data-toggle="pill" href="#pills-Sound" role="tab" aria-controls="pills-Sound"
-                    aria-selected="false">Sound</a>
+                  <a class="nav-link" id="pills-Sound-tab" data-toggle="pill" href="#pills-Sound" role="tab"
+                    aria-controls="pills-Sound" aria-selected="false">Sound</a>
                 </li>
               </ul>
               <div class="tab-content" id="pills-tabContent">
-                <div class="tab-pane fade show active" id="pills-Color" role="tabpanel" aria-labelledby="pills-Color-tab">
-                  <h4 class="text-center">Click the car and choose the color you want!</h4>
+                <div class="tab-pane fade show active" id="pills-Color" role="tabpanel"
+                  aria-labelledby="pills-Color-tab">
+                  <h4>Click the car and choose the color you want!</h4>
                 </div>
-                <div class="tab-pane fade text-center" id="pills-Sound" role="tabpanel" aria-labelledby="pills-Sound-tab">
+                <div class="tab-pane fade text-center" id="pills-Sound" role="tabpanel"
+                  aria-labelledby="pills-Sound-tab">
                   <div class="container">
                     <audio id="carAudio1" src="audio/BMW+DRIVEBY.mp3"> </audio>
                     <audio id="carAudio2" src="audio/car+geardown.mp3"> </audio>
                     <audio id="carAudio3" src="audio/car+horn+x.mp3"> </audio>
                     <div class="btn-group btn-group-toggle" data-toggle="buttons">
-                      <button class="btn btn-secondary car-audio-select" onclick="document.getElementById('carAudio1').play()">
-                      BMW Driveby </button>
-                      <button class="btn btn-secondary car-audio-select" onclick="document.getElementById('carAudio2').play()">
-                      Car geardown </button>
-                      <button class="btn btn-secondary car-audio-select" onclick="document.getElementById('carAudio3').play()">
-                      Car horn </button>
+                      <button class="btn btn-secondary car-audio-select"
+                        onclick="document.getElementById('carAudio1').play()">
+                        BMW Driveby </button>
+                      <button class="btn btn-secondary car-audio-select"
+                        onclick="document.getElementById('carAudio2').play()">
+                        Car geardown </button>
+                      <button class="btn btn-secondary car-audio-select"
+                        onclick="document.getElementById('carAudio3').play()">
+                        Car horn </button>
                     </div>
                   </div>
                 </div>

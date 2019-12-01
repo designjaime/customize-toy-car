@@ -17,7 +17,10 @@
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-118957003-1"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
         gtag('js', new Date());
 
         gtag('config', 'UA-118957003-1');
@@ -30,26 +33,30 @@
         <div id="sidebar-wrapper">
             <ul class="sidebar-nav">
                 <li class="sidebar-brand">
-                    <a>Customize Toy Car</a>
+                    <a>Carstomize</a>
                 </li>
                 <li>
                     <a href="home.html">Home</a>
                 </li>
                 <li>
-                    <a href="#">Garage</a>
+                    <a href="cart.html">My Garage</a>
                 </li>
                 <li>
-                    <a href="index.html">Profile</a>
+                    <a href="index.html">My account</a>
+                </li>
+                <li>
+                    <a href="index.html">Settings</a>
                 </li>
                 <li id="bottombtn">
-                    <input type="submit" id="signout" class="signoutbtn btn-primary btn-xs" value="Sign Out" onclick="handleSignout();"> </li>
+                    <input type="submit" id="signout" class="signoutbtn btn-primary btn-sm" value="Sign Out"
+                        onclick="handleSignout();"> </li>
             </ul>
         </div>
         <div id="page-content-wrapper">
-            <div class="container-fluid">
+            <div class="container">
                 <a href="#menu-toggle" id="menu-toggle">
-                    <img src="img/logo.png"> </a>
-                <div class="row product">
+                    <img class="logo" src="img/Carstomize-logo.png" style="width:140px;"> </a>
+                <div class="row product mt-5">
                     <div class="col-md-6 text-center text-md-right pr-0 pl-0">
                         <input type="color" value="#0000ff" id="car-img-overlay">
                         <img src="" class="img-fluid" id="car-img"> </div>
@@ -88,12 +95,12 @@
                         <a href="race.html" id="race-button">
                             <button class="btn btn-dark mr-3">
                                 <i class="fa fa-automobile"></i>
-                                </span> Go to race</button>
+                                </span> GO TO RACE</button>
                         </a>
                         <a href="payment.html">
-                            <button id="mk_payment" class="btn btn-success">
+                            <button id="mk_payment" class="btn custom-btn">
                                 <i class="fa fa-credit-card"></i>
-                                </span>Checkout</button>
+                                </span>CHECKOUT</button>
                         </a>
                     </div>
                 </div>
