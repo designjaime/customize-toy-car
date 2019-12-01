@@ -3,14 +3,14 @@ html {
   -webkit-font-smoothing: antialiased;
   padding: 20px 0;
 }
-body{
+
+body {
   font-family: 'PT Sans', sans-serif;
 }
-h1 {
-  font-family: 'PT Sans', sans-serif;}
+
 
 .band {
-  width: 90%;
+
   max-width: 1240px;
   margin: 0 auto;
   display: grid;
@@ -23,9 +23,11 @@ h1 {
   .band {
     grid-template-columns: 1fr 1fr;
   }
+
   .item-1-container {
     grid-column: 1/ span 2;
   }
+
   /* .item-1 h1 {
     font-size: 30px;
   } */

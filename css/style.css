@@ -2,11 +2,16 @@
   margin: 0;
   padding: 0;
 }
-body{
-  font-family: 'PT Sans', sans-serif;
+
+body {
+  font-family: 'Open Sans', sans-serif;
 }
-h1 {
-font-family: 'PT Sans', sans-serif;}
+
+h1,
+h2,
+h3 {
+  font-family: 'Dosis', sans-serif;
+}
 
 body {
   overflow-x: hidden;
@@ -15,13 +20,15 @@ body {
 html {
   text-align: center;
 }
-.logo{
+
+.logo {
   max-width: 120px;
 }
 
-.car-init-body{
-  margin-top:100px;
+.car-init-body {
+  margin-top: 100px;
 }
+
 #wrapper {
   padding-left: 0;
   -webkit-transition: all 0.5s ease;
@@ -118,6 +125,7 @@ html {
 .col {
   text-align: center;
 }
+
 .custom-btn {
   background-color: #0094ea;
   color: #ffffff;
@@ -212,6 +220,7 @@ html {
   from {
     -webkit-transform: scale(0)
   }
+
   to {
     -webkit-transform: scale(1)
   }
@@ -221,6 +230,7 @@ html {
   from {
     transform: scale(0)
   }
+
   to {
     transform: scale(1)
   }
@@ -275,19 +285,24 @@ html {
   #wrapper {
     padding-left: 0;
   }
+
   #wrapper.toggled {
     padding-left: 250px;
   }
+
   #sidebar-wrapper {
     width: 0;
   }
+
   #wrapper.toggled #sidebar-wrapper {
     width: 250px;
   }
+
   #page-content-wrapper {
     padding: 20px;
     position: relative;
   }
+
   #wrapper.toggled #page-content-wrapper {
     position: relative;
     margin-right: 0;
@@ -310,34 +325,51 @@ html {
 }
 
 
-#myform{
+#myform {
   text-align: center;
-    padding: 5px;
-    margin-left: 2%;
-    padding:0;
+  padding: 5px;
+  margin-left: 2%;
+  padding: 0;
 }
+
 .qty {
   width: 40px;
   height: 30px;
   text-align: center;
 }
-input.qtyplus { width:25px; height:25px;}
-input.qtyminus { width:25px; height:25px;}
+
+input.qtyplus {
+  width: 25px;
+  height: 25px;
+}
+
+input.qtyminus {
+  width: 25px;
+  height: 25px;
+}
 
 hr {
   border: none;
   height: 1px;
-  width:100%; 
+  width: 100%;
   color: #333;
-  background-color: #333; 
+  background-color: #333;
 }
 
 /* 
 Extra small devices (portrait phones, less than 544px) 
 No media query since this is the default in Bootstrap because it is "mobile first"
 */
-h1 {font-size:1.8rem;} /*1rem = 16px*/
-h2 {font-size:1.2rem;} /*1rem = 16px*/
+h1 {
+  font-size: 1.8rem;
+}
+
+/*1rem = 16px*/
+h2 {
+  font-size: 1.2rem;
+}
+
+/*1rem = 16px*/
 /*
 ####################################################
 M E D I A  Q U E R I E S
@@ -349,32 +381,46 @@ M E D I A  Q U E R I E S
 Bootstrap 4 breakpoints
 */
 /* Small devices (landscape phones, 544px and up) */
-@media (min-width: 544px) {  
-  h1 {font-size:2.0rem;}
+@media (min-width: 544px) {
+  h1 {
+    font-size: 2.0rem;
+  }
 
-  
-   /*1rem = 16px*/
+
+  /*1rem = 16px*/
 }
 
 /* Medium devices (tablets, 768px and up) The navbar toggle appears at this breakpoint */
-@media (min-width: 768px) {  
-  h1 {font-size:2.2rem;}
+@media (min-width: 768px) {
+  h1 {
+    font-size: 2.2rem;
+  }
+
   /*1rem = 16px*/
 }
 
 /* Large devices (desktops, 992px and up) */
-@media (min-width: 992px) { 
-  h1 {font-size:2.5rem;}
-  .logo{
+@media (min-width: 992px) {
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  .logo {
     max-width: 100%;
   }
 }
 
 
 /* Extra large devices (large desktops, 1200px and up) */
-@media (min-width: 1200px) {  
-  h1 {font-size:3rem;} /*1rem = 16px*/    
-  h2 {font-size:1.5rem;} /*1rem = 16px*/
+@media (min-width: 1200px) {
+  h1 {
+    font-size: 3rem;
+  }
+
+  /*1rem = 16px*/
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  /*1rem = 16px*/
 }
-
-

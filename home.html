@@ -16,7 +16,10 @@
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-118957003-1"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
         gtag('js', new Date());
 
         gtag('config', 'UA-118957003-1');
@@ -41,14 +44,15 @@
                     <a href="index.html">Profile</a>
                 </li>
                 <li id="bottombtn">
-                    <input type="submit" id="signout" class="signoutbtn btn-primary btn-xs" value="Sign Out" onclick="handleSignout();"> </li>
+                    <input type="submit" id="signout" class="signoutbtn btn-primary btn-xs" value="Sign Out"
+                        onclick="handleSignout();"> </li>
             </ul>
         </div>
         <div id="page-content-wrapper">
-            <div class="container-fluid">
+            <div class="container">
                 <a href="#menu-toggle" id="menu-toggle">
-                    <img class="logo" src="img/logo.png"> </a>
-                <h1 class="title text-center"> Choosing a car and customization </h1>
+                    <img class="logo mb-5" src="img/Carstomize-logo.png" style="width:140px;"> </a>
+                <h2 class="mt-5">Select the toy car and start to customize it!</h2>
                 <div class="support-grid"></div>
                 <div class="band">
                     <div class="item-1-container">
@@ -68,7 +72,7 @@
                             <a href="#" class="card">
                                 <div class="thumb" style="background-image: url(img/cars/truck-1/rotate01.jpg);"></div>
                                 <article>
-                                    <h2>TRUCK/JEEP</h2>
+                                    <h2>TRUCK&JEEP</h2>
                                     <span>Start customize it</span>
                                 </article>
                             </a>

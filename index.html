@@ -6,19 +6,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
-    <title>customize toycar</title>
+    <title>Carstomize</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <link rel="stylesheet" href="css/signin.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link
+        href="https://fonts.googleapis.com/css?family=Dosis:400,500,600,700,800|Open+Sans:300,400,600,700&display=swap"
+        rel="stylesheet">
+
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-118957003-1"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
         gtag('js', new Date());
 
         gtag('config', 'UA-118957003-1');
     </script>
+
 
 </head>
 
@@ -26,7 +35,7 @@
     <div class="container">
         <div class="logo">
             <a href="home.html">
-                <img src="img/logo.png"> </a>
+                <img src="img/Carstomize-logo.png" style="width:300px;"> </a>
         </div>
         <div class="user-modal">
             <div class="user-modal-container">
@@ -78,11 +87,13 @@
                             </label>
                         </p>
                         <p class="fieldset">
-                            <input class="full-width has-padding" type="submit" value="Create account" onclick="handleSignup();"> </p>
+                            <input class="full-width has-padding" type="submit" value="Create account"
+                                onclick="handleSignup();"> </p>
                     </form>
                 </div>
                 <div id="reset-password">
-                    <p class="form-message">Lost your password? Please enter your email address.</br> You will receive a link to create a new password.</p>
+                    <p class="form-message">Lost your password? Please enter your email address.</br> You will receive a
+                        link to create a new password.</p>
                     <form class="form">
                         <p class="fieldset">
                             <label class="image-replace email" for="reset-email">E-mail</label>
@@ -103,8 +114,12 @@
     <div class="container">
         <div class="text-center">
             <div class="input_control">
-                <input type="submit" id="fblogin" class="loginBtn btn-primary" value="Facebook Login" onclick="handleFBlogin();">
-                <input type="submit" id="googlelogin" class="loginBtn btn-primary" value="Google Login" onclick="handlegooglelogin();"> </div>
+
+                <input type="submit" id="fblogin" class="loginBtn btn-primary" value="Facebook Login"
+                    onclick="handleFBlogin();">
+                <input type="submit" id="googlelogin" class="loginBtn btn-primary" value="Google Login"
+                    onclick="handlegooglelogin();">
+            </div>
         </div>
     </div>
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
